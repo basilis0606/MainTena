@@ -16,7 +16,8 @@ T7-Δημιουργία robustness diagrams των use cases για περετα
 Τ9-Αναθεώρηση domain model με βάση τα robustness diagrams
 milestone 3-Τελος παραδοτέου 3
 
-Τ10-Αρχή συγγραφής κώδικα έργου 
+Τ10-Αρχή συγγραφής κώδικα έργου
+
 Παραδοτέο 4:
 Τ11-Βασιζόμενοι στα use cases και robustness diagrams υλοποιούμε τα sequence diagrams
 Τ12-Αναθεώρηση domain models και πιθανώς use cases με βαση sequence diagrams
