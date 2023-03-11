@@ -1,14 +1,19 @@
 Φαση σχεδιασης
 T1: Aρχικό brainstorming ιδέες και αρχικό structure
 Τ2: Aνάλυση καταληκτικής ιδέας, θέσπιση στόχων και Kαταμερισμός εργασιών
+milestone-αρχή του project
+Φαση σχεδίασης 
 Τ3: Σχεδιασμός infrastructure 
 T4: Σχεδιασμός Gui και αρχικών σχεδίων της εφαρμογής
 Τ5: Σχεδιασμός Βάσης δεδομένων
 Τ6: features and modules design
+milestone-design done and starting implementation
 Φάση υλοποίησης
 Τ7: Υλοποίηση Βάσης
 Τ8: Υλοποίηση του framework της εφαρμογής
 Τ9:Υλοποιηση γραφικων και interaction features
 T10: Διασύνδεση βάσης και κώδικα και κωδικα με gui
+milestone-done with implemetation and starting alpha
 T11:Bug fixes και alpha testing 
+milestone-alpha done
 T12: Προετοιμασια παρουσιασης κι παρουσιαση
