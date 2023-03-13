@@ -1,0 +1,135 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{scrartcl} % Font size
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{subcaption}
+\usepackage{textcomp}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{pdfpages}
+
+\usetikzlibrary{positioning}
+
+% Define a macro to create a table with fixed column widths
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\definecolor{diffstart}{named}{Apricot}
+\definecolor{diffincl}{named}{Green}
+\definecolor{diffrem}{named}{Red}
+
+\usepackage{listings}
+  \lstdefinelanguage{diff}{
+    basicstyle=\ttfamily\small,
+    morecomment=[f][\color{diffstart}]{@@},
+    morecomment=[f][\color{diffincl}]{+\ },
+    morecomment=[f][\color{diffrem}]{-\ },
+  }
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{codeblue}{rgb}{0,0,0.8}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{codeblue},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\usepackage{tocloft}
+\renewcommand{\cftsecfont}{\normalfont}
+\renewcommand{\cftsecpagefont}{\normalfont}
+\addto\captionsgreek{\renewcommand{\contentsname}{\normalfont Περιεχόμενα}}
+
+\lstset{style=mystyle}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{	
+	\normalfont\normalsize
+	\textsc{Πανεπιστήμιο Πατρών, Τμήμα Μηχανικών ΗΥ και Πληροφορικής \\Τεχνολογία λογισμικού 2023}\\ % Your university, school and/or department name(s)
+	\vspace{25pt} % Whitespace
+	\rule{\linewidth}{0.5pt}\\ % Thin top horizontal rule
+	\vspace{20pt} % Whitespace
+    {\Large Risk Assessment v0.1}\\ % The assignment title
+	\vspace{12pt} % Whitespace
+	\rule{\linewidth}{0.5pt}\\ % Thick bottom horizontal rule
+	\vspace{12pt} % Whitespace
+    \includegraphics[width=0.7\textwidth]{../../brand/png/logo-transparent.png}
+        \rule{\linewidth}{2pt}
+}
+\author{
+Κωνσταντίνος Γιακαλλής \\UP1072533 \and Ιωάννης Παναρίτης \\UP1072632 \and \hspace{4ex} Βασίλειος Τσούλος \\ \hspace{5ex}UP1072605 \and \hspace{1ex} Νικόλαος Χαλκιόπουλος \\ \hspace{1ex} UP1072572
+}
+
+
+
+\date{} % Today's date (\today) or a custom date
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT
+%----------------------------------------------------------------------------------------
+
+\bibliographystyle{ieeetr}
+\addto\captionsgreek{\renewcommand{\refname}{Αναφορές}}
+
+
+\begin{document}
+
+\maketitle
+\pagebreak
+\Large
+
+\section*{Risk Assessment}
+
+\nopagebreak
+Για την ανάλυση ρίσκου που ακολουθεί χρησιμοποιούμε κάποιους πίνακες ρίσκου που ακολουθούν την διαβάθμιση που σημειώνεται στον πίνακα 1.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth, trim = 1cm 22.9cm 7cm 1cm, clip]{docs/Risk-assessment/assets/table_1.pdf}
+    \caption{Πίνακας 1}
+\end{figure}
+
+Οι κίνδυνοι που σχετίζονται με την εφαρμογή μας, καθώς και οι προτεινόμενες λύσεις για τον μετριασμό αυτών των κινδύνων, παρουσιάζονται στον Πίνακα 2. \\
+
+Αυτοί οι κίνδυνοι αξιολογήθηκαν με βάση την πιθανότητα εμφάνισής τους και τη σοβαρότητα της επίδρασής τους στην εφαρμογή μας. \\
+
+Αναλύοντας και προτείνοντας λύσεις για κάθε έναν από αυτούς τους κινδύνους, μπορούμε να κατανοήσουμε και να αξιολογήσουμε καλύτερα τους πιθανούς κινδύνους που μπορεί να αντιμετωπίσει η εφαρμογή μας και να λάβουμε τα απαραίτητα μέτρα για την αποτελεσματική διαχείριση αυτών των κινδύνων. \\
+
+\begin{figure}
+    \hspace{-3.3cm}
+    \includegraphics[trim = 0cm 2cm 0cm 1.8cm, clip]{assets/table_2.pdf}
+    \caption{Πίνακας 2}
+\end{figure}
+
+
+\end{document}
