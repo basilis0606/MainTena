@@ -15,6 +15,8 @@
 
 \usetikzlibrary{positioning}
 
+\renewcommand{\thefootnote}{\arabic{footnote}}
+
 % Define a macro to create a table with fixed column widths
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 
@@ -87,7 +89,7 @@
         \rule{\linewidth}{2pt}
 }
 \author{
-Κωνσταντίνος Γιακαλλής \\UP1072533 \and Ιωάννης Παναρίτης \\UP1072632 \and \hspace{4ex} Βασίλειος Τσούλος \\ \hspace{5ex}UP1072605 \and \hspace{1ex} Νικόλαος Χαλκιόπουλος \\ \hspace{1ex} UP1072572
+Νικόλαος Χαλκιόπουλος \thanks{Editor} \\UP1072572 \and Ιωάννης Παναρίτης \thanks{Peer Review} \\UP1072632 \and \hspace{6ex}Βασίλειος Τσούλος \\ \hspace{6ex}UP1072605 \and \hspace{1ex}Κωνσταντίνος Γιακαλλής \\ \hspace{1ex}UP1072533
 }
 
 
@@ -103,7 +105,6 @@
 
 
 \begin{document}
-
 \maketitle
 \pagebreak
 \Large
@@ -130,6 +131,12 @@
     \includegraphics[trim = 0cm 2cm 0cm 1.8cm, clip]{assets/table_2.pdf}
     \caption{Πίνακας 2}
 \end{figure}
+\pagebreak
 
+\section*{Tools Used}
+\begin{itemize}
+    \item Συγγραφή Κειμένου: Overleaf
+    \item Πίνακες: Excel
+\end{itemize}
 
 \end{document}
