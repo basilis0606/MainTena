@@ -14,6 +14,11 @@
 
 \usetikzlibrary{positioning}
 
+\usepackage{titling}
+
+\setcounter{footnote}{0}
+\renewcommand{\thefootnote}{\arabic{footnote}}
+
 % Define a macro to create a table with fixed column widths
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 
@@ -86,7 +91,7 @@
         \rule{\linewidth}{2pt}
 }
 \author{
-Κωνσταντίνος Γιακαλλής \\UP1072533 \and Ιωάννης Παναρίτης \\UP1072632 \and \hspace{4ex} Βασίλειος Τσούλος \\ \hspace{5ex}UP1072605 \and \hspace{1ex} Νικόλαος Χαλκιόπουλος \\ \hspace{1ex} UP1072572
+Ιωάννης Παναρίτης \thanks{Editor} \\UP1072632 \and Βασίλειος Τσούλος \thanks{Peer Review} \\UP1072605 \and Κωνσταντίνος Γιακαλλής \\UP1072533 \and \hspace{-0.9cm} Νικόλαος Χαλκιόπουλος \\ \hspace{-0.9cm}UP1072572
 }
 
 
@@ -106,6 +111,7 @@
 \maketitle
 \pagebreak
 \Large
+
 
 \section*{Project Description}
 
@@ -132,6 +138,48 @@
         \item Κοινότητα - Η εφαρμογή παρέχει μια πλατφόρμα στους χρήστες να συζητούν και να λύνουν σχετικές ερωτήσεις με άλλους οδηγούς και τεχνίτες.
     \end{itemize}
 
-% \bibliography{bibliography}
+\pagebreak
+
+\section*{Mock ups \cite{materialdesign}}
+
+\begin{figure}[!htb]
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.6\linewidth]{assets/timeline_mock_up.jpg}
+  \caption{Timeline}
+  \label{fig:sfig1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.6\linewidth]{assets/analytics_mock_up.png}
+  \caption{Analytics}
+  \label{fig:sfig2}
+\end{subfigure}
+\label{fig:fig}
+\par\bigskip % force a bit of vertical whitespace
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.6\linewidth]{assets/forum_mock_up.jpg}
+  \caption{Forum}
+  \label{fig:sfig3}
+\end{subfigure}
+\label{fig:fig}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.6\linewidth]{assets/profile_mock_up.jpg}
+  \caption{Profile}
+  \label{fig:sfig4}
+\end{subfigure}
+\label{fig:fig}
+\end{figure}
+
+\section*{Tools Used}
+\begin{itemize}
+    \item Συγγραφή κειμένου: Overleaf
+    \item Δημιουργία Mock up: Gimp
+\end{itemize}
+
+\bibliography{bibliography}
+% \cite{materialdesign}
 
 \end{document}
