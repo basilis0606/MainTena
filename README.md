@@ -1,3 +1,3 @@
 # Software_Engineering
 
-![projet logo](/brand/png/logo-transparent.png)
+![projet logo](/brand/png/logo-black.png)
