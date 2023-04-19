@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/basilis0606/MainTena/">
-    <img src="brand/png/logo-no-background.png" alt="Logo" width="200" height="200">
+    <img src="brand/png/logo-no-background.png" alt="Logo" width="250" height="250">
   </a>
 
   <h3 align="center">Maintena</h3>
