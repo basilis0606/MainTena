@@ -5,7 +5,7 @@
 
 An awesome car maintenance app that does not make cofee!
 
-- [Explore the docs](https://github.com/othneildrew/Best-README-Template) »
+- [Explore the docs](https://github.com/othneildrew/Best-README-Template)
 - [View Demo](https://github.com/basilis0606/MainTena/)
 - [Report Bug](https://github.com/basilis0606/MainTena//issues)
 - [Request Feature](https://github.com/basilis0606/MainTena//issues)
