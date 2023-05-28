@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+// import intl package for date formatting
+import 'package:intl/intl.dart';
 
 class SquareWidget2 extends StatelessWidget {
   final double size = 35;
-  final Color color = Colors.transparent;
+  final Color color = Colors.blueGrey;
   final String icon;
   final String upLeftText;
-  final String upRightText;
+  final DateTime date;
   final String downLeftText;
   final double? progress;
 
@@ -14,13 +16,17 @@ class SquareWidget2 extends StatelessWidget {
       {Key? key,
       required this.icon,
       required this.upLeftText,
-      required this.upRightText,
+      required this.date,
       required this.downLeftText,
       this.progress})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    // Convert date to string, with month name instead of number
+
+    String upRightText = DateFormat('MMM d, yyyy').format(date);
+
     return Container(
       decoration: BoxDecoration(
         color: color,
@@ -36,11 +42,11 @@ class SquareWidget2 extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Center(
-                  child: FractionallySizedBox(
-                    widthFactor: 0.6,
-                    child: SvgPicture.asset(icon),
-                  ),
-                ),
+                    child: SvgPicture.asset(
+                  icon,
+                  height: size * 1.3,
+                  width: size * 1.3,
+                )),
               ],
             ),
           ),
@@ -49,23 +55,36 @@ class SquareWidget2 extends StatelessWidget {
             child: Column(
               children: [
                 // add 3 rows
-                Row(
-                  children: [
-                    // Add column with text
-                    Expanded(
-                      child: Text(upLeftText),
-                    ),
-                    // Add column with text
-                    Expanded(
-                      child: Align(
+                Padding(
+                  padding: const EdgeInsets.only(
+                      top: 4.0), // Adjust the padding value as needed
+                  child: Row(
+                    children: [
+                      // Add column with text
+                      Expanded(
+                        child: Text(
+                          upLeftText,
+                          style: const TextStyle(fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                      // Add column with text
+                      Expanded(
+                        child: Align(
                           alignment: Alignment.centerRight,
                           child: Padding(
                             padding: const EdgeInsets.only(right: 16.0),
-                            child: Text(upRightText),
-                          )),
-                    ),
-                  ],
+                            child: Text(
+                              upRightText,
+                              style:
+                                  const TextStyle(fontWeight: FontWeight.w600),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
+
                 Expanded(
                   child: Row(
                     children: [
@@ -86,26 +105,34 @@ class SquareWidget2 extends StatelessWidget {
                     ],
                   ),
                 ),
-                Row(
-                  children: [
-                    Expanded(
-                      child: Text(downLeftText),
-                    ),
-                    // Add column with text
-                    const Expanded(
-                      child: SizedBox(),
-                    ),
-                    // Add column with text
-                    if (progress != null)
+                Padding(
+                  padding: const EdgeInsets.only(
+                      bottom: 4.0), // Adjust the bottom padding value as needed
+                  child: Row(
+                    children: [
                       Expanded(
-                        child: Align(
+                          child: Text(downLeftText,
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.w600))),
+                      const Expanded(
+                        child: SizedBox(),
+                      ),
+                      if (progress != null)
+                        Expanded(
+                          child: Align(
                             alignment: Alignment.centerRight,
                             child: Padding(
                               padding: const EdgeInsets.only(right: 16.0),
-                              child: Text("${(progress! * 100).toInt()}%"),
-                            )),
-                      ),
-                  ],
+                              child: Text(
+                                "${(progress! * 100).toInt()}%",
+                                style: const TextStyle(
+                                    fontWeight: FontWeight.w600),
+                              ),
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
                 ),
               ],
             ),
