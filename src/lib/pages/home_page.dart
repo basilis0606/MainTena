@@ -1,3 +1,4 @@
+import 'package:try_project/classes/Vehicle.dart';
 import 'package:try_project/fragments/first_car.dart';
 import 'package:try_project/fragments/first_fragment.dart';
 import 'package:try_project/fragments/second_fragment.dart';
@@ -11,6 +12,8 @@ class DrawerItem {
 }
 
 class HomePage extends StatefulWidget {
+  final Vehicle veh;
+
   final drawerItems = [
     DrawerItem("Map", Icons.map),
     DrawerItem("Newsfeed", Icons.newspaper),
@@ -22,7 +25,7 @@ class HomePage extends StatefulWidget {
     DrawerItem("Car 2", Icons.car_repair)
   ];
 
-  HomePage({super.key});
+  HomePage({Key? key, required this.veh}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
@@ -43,7 +46,7 @@ class HomePageState extends State<HomePage> {
 
   _getDrawerItemWidget(int pos) {
     if (pos < widget.cars.length) {
-      return const FirstCar();
+      return FirstCar(veh: widget.veh);
     } else if (pos == widget.cars.length) {
       return const FirstFragment();
     } else if (pos == widget.cars.length + 1) {

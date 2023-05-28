@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:try_project/classes/Vehicle.dart';
 import 'package:try_project/fragments/garage/Expenses.dart';
 
 class FirstCar extends StatelessWidget {
-  const FirstCar({super.key});
+  final Vehicle veh;
+
+  const FirstCar({Key? key, required this.veh}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +29,9 @@ class FirstCar extends StatelessWidget {
             ),
             backgroundColor: Colors.grey[200],
           ),
-          body: const TabBarView(
+          body: TabBarView(
             children: [
-              Expenses(),
+              Expenses(my_veh: this.veh), // Pass the named parameter correctly
               Icon(Icons.directions_car),
               Icon(Icons.directions_transit),
               Text("Error"),

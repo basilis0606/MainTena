@@ -6,30 +6,33 @@ import 'package:try_project/classes/ServiceManual.dart';
 
 class Vehicle {
   String name;
-  Image image;
+  Image? image;
   String plateNumber;
   String model;
   String brand;
   ServiceManual? manual;
-  List<Expense> expenses_2;
+  List<Expense> expenses_2 = [];
 
   Vehicle.withManual(
       {required this.name,
-      required this.image,
+      this.image,
       required this.plateNumber,
       required this.model,
       required this.brand,
       required this.manual,
-      required this.expenses_2});
+      List<Expense>? expenses_2}) {
+    this.expenses_2 = expenses_2 ?? [];
+  }
 
   Vehicle(
       {required this.name,
-      required this.image,
+      image,
       required this.plateNumber,
       required this.model,
       required this.brand,
       required double miles,
-      required this.expenses_2}) {
+      List<Expense>? expenses_2}) {
+    this.expenses_2 = expenses_2 ?? [];
     manual = ServiceManual(mileage: miles, notifications: []);
   }
 
