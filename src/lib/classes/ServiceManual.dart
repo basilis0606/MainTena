@@ -1,10 +1,10 @@
 import 'package:try_project/classes/Notification.dart' as notif;
 
 class ServiceManual {
-  double milage;
+  double mileage;
   List<notif.Notification> notifications;
 
-  ServiceManual({required this.milage, required this.notifications});
+  ServiceManual({required this.mileage, required this.notifications});
 
   void createNotification(milage, date, estimatedCost, description) {
     notifications.add(notif.Notification(
@@ -12,5 +12,14 @@ class ServiceManual {
         date: date,
         estimatedCost: estimatedCost,
         description: description));
+  }
+
+  void deleteNotification(notif.Notification notification) {
+    notifications.remove(notification);
+  }
+
+  void UpgradeSuggestions() {
+    // to be implemented
+    throw UnimplementedError();
   }
 }
