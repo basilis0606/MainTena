@@ -1,9 +1,9 @@
-commentList(): void
-προσθηκη editPost καπου στο post η το forum post
-edit review στο review
-change "method" name στο review
-news connect to newsfeed and newsletter
-newsletter list "news"
-newsfeed list<news>
-more news structure thought
-damages types cost, type of damage and date
+commentList(): void //Done
+προσθηκη editPost καπου στο post η το forum post //Done
+edit review στο review //Done
+change "method" name στο review //Done
+news connect to newsfeed and newsletter //Done
+newsletter list "news" //Done
+newsfeed list<news> //Done
+more news structure thought //To do
+damages types cost, type of damage and date //Done (cost on expenses, and date on notification)

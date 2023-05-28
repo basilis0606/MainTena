@@ -1,0 +1,33 @@
+Class : User
+Attributes:
++user_id: int
++membership_exp_date: : LocalDateTime //To do
++become_member(date exp_date): void //To do
+// edits user’s Membership_exp_date and adjusts their memebership status accordingly
+
+Class : Notification
+Attributes:
+Methods:
+Class : Vehicle
+Attributes:
++Vehicle_id: int
++short_description: string
++extensive_description: string
+
+Methods:
+add_expence(Expence): void //Done
+complete_expence(Expence): void //Don't need this
+
+
+Class : Model (extends brand)
+Attributes:
++model_id: int
++name: string
++brand: string+manual: ServiceManual
+Methods:
+
+Class : Map
+Attributes: 
+Methods:
+highlightRepairShops(List<RepairShop>,User): List<RepairShop> // παίρνει λίστα από repair shops (που πιθανά θα βγαίνει από τις παραπάνω μεθόδους) και με βάση τα serviceTasks που σχετίζονται με τα vehicles του User επιστρέφει μια υπο-λίστα με τα service shops που προσφέρουν τα απαιτούμενα service tasks. //Already have done this
+
