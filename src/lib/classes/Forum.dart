@@ -1,43 +1,62 @@
 class Forum {
-  String name;
-  List<String> categories;
-  List<Post> posts;
+  List<ForumPost> posts;
 
-  Forum(this.name, this.categories, this.posts);
-
-  void createPost(String title, String content) {
-    // Create a new post object
-    Post newPost = Post(title, content);
-
-    // Add the post to the list of posts
-    posts.add(newPost);
+  Forum() {
+    posts = [];
   }
 
   void read(ForumPost post) {
     // Perform actions to read the post
     // For example, you can display the post's content
-    print("Reading Post:");
-    print("Title: ${post.title}");
-    print("Content: ${post.content}");
-    print("----------------------");
+
+  }
+
+  List<ForumPost> filter(String searchString) {
+    // Filter the posts based on the search string
+    List<ForumPost> filteredPosts = [];
+
+    for (var post in posts) {
+      if (post.title.contains(searchString) || post.content.contains(searchString)) {
+        filteredPosts.add(post);
+      }
+    }
+
+    return filteredPosts;
+  }
+
+  void newPost() {
+    // Prompt the user for input to create a new post
+    // For example, you can use the console to get the post's title and content
   }
 }
 
-class Post {
+class ForumPost {
   String title;
   String content;
 
-  Post(this.title, this.content);
+  ForumPost(this.title, this.content);
 }
 
 void main() {
-  // Creating a forum object
-  Forum myForum = Forum("My Forum", ["General", "News"], []);
+  /*// Creating a forum object
+  Forum myForum = Forum();
 
   // Creating some posts
-  myForum.createPost("First Post", "This is the content of the first post.");
-  myForum.createPost("Second Post", "This is the content of the second post.");
+  myForum.newPost();
+  myForum.newPost();
 
   // Displaying all posts
-  myForum.displayPosts();
+  for (var post in myForum.posts) {
+    myForum.read(post);
+  }
+
+  // Filtering posts
+  String searchString = // get user input for search string
+  List<ForumPost> filteredPosts = myForum.filter(searchString);
+
+  // Displaying filtered posts
+  print("Filtered Posts:");
+  for (var post in filteredPosts) {
+    myForum.read(post);*/
+  }
 }
