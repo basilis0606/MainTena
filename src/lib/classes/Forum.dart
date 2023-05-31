@@ -1,3 +1,5 @@
+import 'Post.dart';
+import 'Comment.dart';
 class Forum {
   List<ForumPost> posts;
 
