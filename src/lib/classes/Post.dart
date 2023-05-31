@@ -1,0 +1,25 @@
+class Post {
+  String title;
+  String text;
+  DateTime date;
+  List<Comment> comments;
+
+  Post(this.title, this.text) {
+    date = DateTime.now();
+    comments = [];
+  }
+
+  void addComment(String comment) {
+    // Create a new comment object
+    Comment newComment = Comment(comment);
+
+    // Add the comment to the list of comments
+    comments.add(newComment);
+  }
+
+  void editPost(String newTitle, String newText) {
+    // Update the title and text of the post
+    title = newTitle;
+    text = newText;
+  }
+}
