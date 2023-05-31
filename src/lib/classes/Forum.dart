@@ -1,10 +1,10 @@
-import 'Post.dart';
-import 'Comment.dart';
+import 'dart:core';
+import 'package:try_project/classes/ForumPost.dart';
 class Forum {
-  List<ForumPost> posts;
+  List<ForumPost> posts=[];
 
   Forum() {
-    List<Post>posts = [];
+    posts = [];
   }
 
   void read(ForumPost post) {
@@ -31,48 +31,6 @@ class Forum {
     // For example, you can use the console to get the post's title and content
   }
 }
-class Post {
-  String title;
-  String text;
-  DateTime date;
-  List<Comment> comments;
-
-  Post(this.title, this.text) {
-    date = DateTime.now();
-    comments = [];
-  }
-
-  void addComment(String comment) {
-    // Create a new comment object
-    Comment newComment = Comment(comment);
-
-    // Add the comment to the list of comments
-    comments.add(newComment);
-  }
-
-  void editPost(String newTitle, String newText) {
-    // Update the title and text of the post
-    title = newTitle;
-    text = newText;
-  }
-}
-class ForumPost {
-  String title;
-  String content;
-  int likes, dislikes;
-
-  ForumPost(this.title, this.content);
-
-  void like(){
-    likes++;}
-  void dislike(){
-    dislikes++;
-}
-  class Comment {
-  String content;
-
-  Comment(this.content);
-  }
 void main() {
   /*// Creating a forum object
   Forum myForum = Forum();
@@ -95,4 +53,3 @@ void main() {
   for (var post in filteredPosts) {
     myForum.read(post);*/
   }
-}
