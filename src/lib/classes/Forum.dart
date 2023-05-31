@@ -33,9 +33,14 @@ class Forum {
 class ForumPost {
   String title;
   String content;
-  String likes, dislikes;
+  int likes, dislikes;
 
   ForumPost(this.title, this.content);
+
+  void like(){
+    likes++;}
+  void dislike(){
+    dislikes++;
 }
 
 void main() {
