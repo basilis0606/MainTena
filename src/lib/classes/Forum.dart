@@ -13,7 +13,7 @@ class Forum {
 
   }
 
-  List<ForumPost> filter(String searchString) {
+  List<ForumPost> filter(String searchString) {//not really search string but filtered list needs change
     // Filter the posts based on the search string
     List<ForumPost> filteredPosts = [];
 
