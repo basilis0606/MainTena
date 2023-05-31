@@ -33,6 +33,7 @@ class Forum {
 class ForumPost {
   String title;
   String content;
+  String likes, dislikes;
 
   ForumPost(this.title, this.content);
 }
