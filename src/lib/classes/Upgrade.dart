@@ -1,10 +1,10 @@
 import 'package:try_project/classes/ServiceTask.dart';
 
 class Upgrade extends ServiceTask {
-  String type;
+  String type='';
 
   Upgrade(
-      {required this.modificationType,
+      {//required this.modificationType,
       required serviceTaskId,
       required mileage,
       required date,
