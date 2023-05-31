@@ -13,13 +13,13 @@ class Forum {
     posts.add(newPost);
   }
 
-  void displayPosts() {
-    for (int i = 0; i < posts.length; i++) {
-      print("Post ${i + 1}:");
-      print("Title: ${posts[i].title}");
-      print("Content: ${posts[i].content}");
-      print("----------------------");
-    }
+  void read(ForumPost post) {
+    // Perform actions to read the post
+    // For example, you can display the post's content
+    print("Reading Post:");
+    print("Title: ${post.title}");
+    print("Content: ${post.content}");
+    print("----------------------");
   }
 }
 
