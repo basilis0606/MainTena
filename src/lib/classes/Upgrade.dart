@@ -17,4 +17,5 @@ class Upgrade extends ServiceTask {
             estimatedCost: estimatedCost,
             description: description);
 }
+main(){}
 
