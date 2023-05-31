@@ -45,3 +45,4 @@ class Test {
     print(v.expenses_2);
   }
 }
+void main(){}
