@@ -1,8 +1,10 @@
+import 'package:try_project/classes/Comment.dart';
+import 'dart:core';
 class Post {
   String title;
   String text;
-  DateTime date;
-  List<Comment> comments;
+  DateTime date = DateTime.now();
+  List<Comment> comments=[];
 
   Post(this.title, this.text) {
     date = DateTime.now();
@@ -22,4 +24,7 @@ class Post {
     title = newTitle;
     text = newText;
   }
+}
+void main(){
+
 }
