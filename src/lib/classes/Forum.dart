@@ -2,7 +2,7 @@ class Forum {
   List<ForumPost> posts;
 
   Forum() {
-    posts = [];
+    List<Post>posts = [];
   }
 
   void read(ForumPost post) {
@@ -29,7 +29,31 @@ class Forum {
     // For example, you can use the console to get the post's title and content
   }
 }
+class Post {
+  String title;
+  String text;
+  DateTime date;
+  List<Comment> comments;
 
+  Post(this.title, this.text) {
+    date = DateTime.now();
+    comments = [];
+  }
+
+  void addComment(String comment) {
+    // Create a new comment object
+    Comment newComment = Comment(comment);
+
+    // Add the comment to the list of comments
+    comments.add(newComment);
+  }
+
+  void editPost(String newTitle, String newText) {
+    // Update the title and text of the post
+    title = newTitle;
+    text = newText;
+  }
+}
 class ForumPost {
   String title;
   String content;
@@ -42,7 +66,11 @@ class ForumPost {
   void dislike(){
     dislikes++;
 }
+  class Comment {
+  String content;
 
+  Comment(this.content);
+  }
 void main() {
   /*// Creating a forum object
   Forum myForum = Forum();
