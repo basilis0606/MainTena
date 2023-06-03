@@ -57,9 +57,7 @@ class RepairShop {
     reviews.add(Review(rating, comment));
   }
 
-  showAllReviews() {
-    for (final Review in reviews) {
-      print(Review);
-    }
+  getReviews() {
+    return reviews;
   }
 }
