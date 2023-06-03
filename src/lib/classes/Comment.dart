@@ -8,7 +8,7 @@ class Comment {
   }
 
   void showComment() {
-    print(content);
+    throw UnimplementedError();
   }
 
   String getComment() {
