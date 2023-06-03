@@ -10,6 +10,10 @@ class ForumPost extends Post {
     likes++;
   }
 
+  void unlike() {
+    likes--;
+  }
+
   void dislike() {
     dislikes++;
   }
