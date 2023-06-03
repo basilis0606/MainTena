@@ -1,12 +1,9 @@
 import 'dart:core';
-class News {
-  String title;
-  String content;
-  DateTime date=DateTime.now();
 
-  News(this.title, this.content) {
-    date = DateTime.now();
-  }
+import 'package:try_project/classes/Post.dart';
+
+class News extends Post {
+  News(String title, String text) : super(title, text);
 
   List<News> getSimilar() {
     // Fetch similar news from a data source
@@ -18,4 +15,5 @@ class News {
     ];
   }
 }
-void main(){}
+
+void main() {}
