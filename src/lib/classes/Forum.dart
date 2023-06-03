@@ -9,6 +9,8 @@ class Forum {
   void read(ForumPost post) {
     // Perform actions to read the post
     // For example, you can display the post's content
+
+    throw UnimplementedError();
   }
 
   List<ForumPost> filter(String searchString) {
