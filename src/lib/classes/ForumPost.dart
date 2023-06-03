@@ -1,13 +1,10 @@
-class ForumPost {
-  String title;
-  String content;
-  int likes=0;
-  int dislikes=0;
+import 'package:try_project/classes/Post.dart';
 
-  ForumPost(this.title, this.content) {
-    likes = 0;
-    dislikes = 0;
-  }
+class ForumPost extends Post {
+  int likes = 0;
+  int dislikes = 0;
+
+  ForumPost(String title, String text) : super(title, text);
 
   void like() {
     likes++;
