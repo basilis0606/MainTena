@@ -20,7 +20,7 @@ class Forum {
 
     for (var post in posts) {
       if (post.title.contains(searchString) ||
-          post.content.contains(searchString)) {
+          post.text.contains(searchString)) {
         filteredPosts.add(post);
       }
     }
