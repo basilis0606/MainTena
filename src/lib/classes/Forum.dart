@@ -28,9 +28,12 @@ class Forum {
     return filteredPosts;
   }
 
-  void newPost() {
-    // Prompt the user for input to create a new post
-    // For example, you can use the console to get the post's title and content
+  void newPost(String title, String text) {
+    // Create a new post object
+    ForumPost newPost = ForumPost(title, text);
+
+    // Add the post to the list of posts
+    posts.add(newPost);
   }
 }
 
