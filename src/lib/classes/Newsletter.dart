@@ -1,4 +1,4 @@
-import 'news.dart';
+import 'News.dart';
 
 class Newsletter {
   List<News> news;

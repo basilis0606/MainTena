@@ -1,10 +1,10 @@
-import 'package:try_project/classes/newsletter.dart';
-import 'package:try_project/classes/news.dart';
+import 'Newsletter.dart';
+import 'News.dart';
 import 'dart:core';
 
 class Newsfeed {
-  List<Newsletter> newsletters=[];
-  List<News> news=[];
+  List<Newsletter> newsletters = [];
+  List<News> news = [];
 
   Newsfeed();
 
@@ -13,9 +13,15 @@ class Newsfeed {
   }
 
   void removeNewsletter(int index) {
-    if (index >= 0 && index < newsletters.length) {
-      newsletters.removeAt(index);
+    try {
+    newsletters.removeAt(index);
+  } catch (e) {
+    if (e is RangeError) {
+      print('Invalid index: $index');
     }
+  }
+}
+
   }
 
   void filter() {
@@ -30,6 +36,7 @@ class Newsfeed {
     news = [];
   }
 }
+
 void main() {
   News news1 = News("Breaking News 1", "Breaking news content 1");
   News news2 = News("Breaking News 2", "Breaking news content 2");

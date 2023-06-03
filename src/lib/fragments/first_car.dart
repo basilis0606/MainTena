@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:try_project/classes/Vehicle.dart';
-import 'package:try_project/fragments/garage/Expenses.dart';
+import 'package:try_project/fragments/garage/expenses.dart';
 
 class FirstCar extends StatelessWidget {
   final Vehicle veh;
