@@ -14,12 +14,3 @@ class ForumPost extends Post {
     dislikes++;
   }
 }
-/*
-void main() {
-  ForumPost myPost = ForumPost("My Title", "My Content");
-  myPost.like();
-  myPost.dislike();
-
-  print("Likes: ${myPost.likes}");       // Output: Likes: 1
-  print("Dislikes: ${myPost.dislikes}"); // Output: Dislikes: 1
-}*/
