@@ -14,20 +14,24 @@ class Newsfeed {
 
   void removeNewsletter(int index) {
     try {
-    newsletters.removeAt(index);
-  } catch (e) {
-    if (e is RangeError) {
-      print('Invalid index: $index');
+      newsletters.removeAt(index);
+    } catch (e) {
+      if (e is RangeError) {
+        print('Invalid index: $index');
+      }
     }
   }
-}
 
-  }
+  List<News> filter(String searchString) {
+    List<News> filteredNews = [];
 
-  void filter() {
-    // Implement your filtering logic here
-    // This is just a placeholder
-    news = [];
+    for (var n in news) {
+      if (n.title.contains(searchString) || n.text.contains(searchString)) {
+        filteredNews.add(n);
+      }
+    }
+
+    return filteredNews;
   }
 
   void findNews() {
