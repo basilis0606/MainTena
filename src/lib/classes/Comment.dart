@@ -1,9 +1,9 @@
 class Comment {
-  String content;
+  String text;
 
-  Comment(this.content);
+  Comment(this.text);
 
-  void editComment(String newContent) {
-    content = newContent;
+  void editComment(String text) {
+    this.text = text;
   }
 }
