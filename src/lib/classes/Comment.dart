@@ -6,4 +6,6 @@ class Comment {
   void editComment(String newContent) {
     content = newContent;
   }
+
+  void showComment() {}
 }
