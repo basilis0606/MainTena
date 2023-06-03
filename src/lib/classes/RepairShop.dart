@@ -53,8 +53,8 @@ class RepairShop {
     return services.contains(repairId);
   }
 
-  addReview() {
-    reviews.add(Review);
+  addReview(double rating, String comment) {
+    reviews.add(Review(rating, comment));
   }
 
   showAllReviews() {
