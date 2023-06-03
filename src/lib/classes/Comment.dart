@@ -7,5 +7,7 @@ class Comment {
     content = newContent;
   }
 
-  void showComment() {}
+  void showComment() {
+    print();
+  }
 }
