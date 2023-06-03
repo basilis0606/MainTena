@@ -8,14 +8,19 @@ class Map {
     this.repairShops = repairShops ?? [];
   }
 
-  getClosestRepairShops(Location location, int serviceId, int quantity) {
-    // keeps only those repair shops that can provide the service
-    List<RepairShop> repairShopsTemp = this
-        .repairShops!
-        .where((repairShop) => repairShop.hasRepair(serviceId))
-        .toList();
+  List<RepairShop> getClosestRepairShops(Location location, int quantity,
+      {int? serviceId}) {
+    if (serviceId != null) {
+      // Filter repair shops that can provide the specified service
+      List<RepairShop> filteredRepairShops = repairShops!
+          .where((repairShop) => repairShop.hasRepair(serviceId))
+          .toList();
 
-    // return the first quantity repair shops
-    return repairShopsTemp.sublist(0, quantity);
+      // Return the first `quantity` repair shops that provide the service
+      return filteredRepairShops.sublist(0, quantity);
+    } else {
+      // Return the first `quantity` repair shops
+      return repairShops!.sublist(0, quantity);
+    }
   }
 }
