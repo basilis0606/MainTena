@@ -17,4 +17,8 @@ class ForumPost extends Post {
   void dislike() {
     dislikes++;
   }
+
+  void undislike() {
+    dislikes--;
+  }
 }
