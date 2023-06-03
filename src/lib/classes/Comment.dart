@@ -10,4 +10,6 @@ class Comment {
   void showComment() {
     print(content);
   }
+
+  String getComment() {}
 }
