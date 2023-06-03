@@ -1,5 +1,6 @@
 import 'Newsletter.dart';
 import 'News.dart';
+import 'dart:math';
 import 'dart:core';
 
 class Newsfeed {
@@ -34,10 +35,20 @@ class Newsfeed {
     return filteredNews;
   }
 
-  void findNews() {
-    // Implement your news finding logic here
-    // This is just a placeholder
-    news = [];
+  void findNews(int quantity) {
+    List<News> allNews = [];
+
+    // Collect the last 100 news from each newsletter
+    for (var newsletter in newsletters) {
+      int startIndex = max(0, newsletter.news.length - 100);
+      allNews.addAll(newsletter.news.sublist(startIndex));
+    }
+
+    // Shuffle the news randomly
+    allNews.shuffle();
+
+    // Return the first n news
+    news.addAll(allNews.take(n));
   }
 }
 
