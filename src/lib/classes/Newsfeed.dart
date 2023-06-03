@@ -48,27 +48,27 @@ class Newsfeed {
     allNews.shuffle();
 
     // Return the first n news
-    news.addAll(allNews.take(n));
+    news.addAll(allNews.take(quantity));
   }
 }
 
-void main() {
-  News news1 = News("Breaking News 1", "Breaking news content 1");
-  News news2 = News("Breaking News 2", "Breaking news content 2");
+// void main() {
+//   News news1 = News("Breaking News 1", "Breaking news content 1");
+//   News news2 = News("Breaking News 2", "Breaking news content 2");
 
-  List<News> newsList = [news1, news2];
+//   List<News> newsList = [news1, news2];
 
-  Newsletter newsletter = Newsletter(newsList);
+//   Newsletter newsletter = Newsletter(newsList);
 
-  Newsfeed myNewsfeed = Newsfeed();
-  myNewsfeed.addNewsletter(newsletter);
+//   Newsfeed myNewsfeed = Newsfeed();
+//   myNewsfeed.addNewsletter(newsletter);
 
-  // Perform filtering
-  myNewsfeed.filter();
+//   // Perform filtering
+//   myNewsfeed.filter();
 
-  // Find specific news articles
-  myNewsfeed.findNews();
+//   // Find specific news articles
+//   myNewsfeed.findNews();
 
-  // Remove a newsletter
-  myNewsfeed.removeNewsletter(0);
-}
+//   // Remove a newsletter
+//   myNewsfeed.removeNewsletter(0);
+// }
