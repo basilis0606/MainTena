@@ -7,6 +7,9 @@ class News extends Post {
 
   List<News> getSimilar() {
     // Fetch similar news from a data source
+
+    throw UnimplementedError();
+
     // For demonstration purposes, let's return a hardcoded list of similar news
     return [
       News("Similar News 1", "Similar news content 1"),
