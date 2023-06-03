@@ -1,20 +1,11 @@
-import 'package:flutter/material.dart';
-import 'package:try_project/classes/Expense.dart';
-import 'package:try_project/classes/ServiceManual.dart';
-
 class Review {
- 
- double rating;
- String comment;
- 
+  double rating;
+  String comment;
+
+  Review(this.rating, this.comment);
+
+  editReview(double rating, String comment) {
+    this.rating = rating;
+    this.comment = comment;
   }
-
-  Review()
-  {}
-
-edit_Review( double ratingA String commentA)
-{
- this.rating=ratingA;
- this.comment=commentA;
 }
-
