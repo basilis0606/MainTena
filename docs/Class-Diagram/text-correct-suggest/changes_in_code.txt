@@ -1,3 +1,4 @@
 editPost() -> editPost(String,String)
 unlike(), undislike()
 newPost() -> newPost(String, String)
+addNewsletter(int) -> addNewsletter(Newsletter)

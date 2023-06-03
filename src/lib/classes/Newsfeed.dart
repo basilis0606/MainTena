@@ -6,10 +6,7 @@ class Newsfeed {
   List<Newsletter> newsletters=[];
   List<News> news=[];
 
-  Newsfeed() {
-    newsletters = [];
-    news = [];
-  }
+  Newsfeed();
 
   void addNewsletter(Newsletter newsletter) {
     newsletters.add(newsletter);
