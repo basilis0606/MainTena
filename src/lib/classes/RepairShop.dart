@@ -49,13 +49,8 @@ class RepairShop {
     };
   }
 
-  hasRepair(int repair) {
-    bool a;
-    for (final int b in services) {
-      if (repair == b) {
-        a = b;
-      }
-    }
+  hasRepair(int repairId) {
+    return services.contains(repairId);
   }
 
   addReview() {
