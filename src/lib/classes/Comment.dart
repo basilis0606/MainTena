@@ -8,6 +8,6 @@ class Comment {
   }
 
   void showComment() {
-    print("Comment: $content");
+    print(content);
   }
 }
