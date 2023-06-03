@@ -3,3 +3,4 @@ unlike(), undislike()
 newPost() -> newPost(String, String)
 addNewsletter(int) -> addNewsletter(Newsletter)
 Newsfeed.filter() -> List<news> filter(String)
+work_hours -> opening_hours, closing_hours
