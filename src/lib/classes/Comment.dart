@@ -11,5 +11,7 @@ class Comment {
     print(content);
   }
 
-  String getComment() {}
+  String getComment() {
+    throw UnimplementedError();
+  }
 }
