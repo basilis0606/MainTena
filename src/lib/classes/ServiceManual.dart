@@ -18,4 +18,12 @@ class ServiceManual {
     // to be implemented
     throw UnimplementedError();
   }
+
+  void manuallyDone(int index) {
+    notifications[index].complete();
+  }
+
+  void manuallyIgnore(int index) {
+    notifications[index].ignore();
+  }
 }
