@@ -34,7 +34,11 @@ class Fuel extends notif.Notification {
         cost=this.estimatedCost
     }
 
+    double egetLiters()
+    {
 
+        return this.liters
+    }
 
     return cost;
     throw UnimplementedError();
