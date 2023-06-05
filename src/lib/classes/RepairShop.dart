@@ -6,7 +6,7 @@ import 'Review.dart';
 class RepairShop {
   String name;
   String email;
-  String phone;
+  String phoneNumber;
   String website;
   Location location;
   List<int> services = [];
@@ -18,7 +18,7 @@ class RepairShop {
   RepairShop(
       this.name,
       this.email,
-      this.phone,
+      this.phoneNumber,
       this.website,
       this.location,
       this.services,
