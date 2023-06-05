@@ -9,19 +9,16 @@ class Activity {
 
   Activity();
 
-  void getRecentActivity() {
-    throw UnimplementedError();
+  List<Post> getRecentPosts() {
+    // return first 10 posts
+    return posts.sublist(0, 10);
   }
 
-  void getRecentPosts() {
-    throw UnimplementedError();
+  List<Comment> getRecentComments() {
+    return comments.sublist(0, 10);
   }
 
-  void getRecentComments() {
-    throw UnimplementedError();
-  }
-
-  void getRecentReviews() {
+  List<Review> getRecentReviews() {
     throw UnimplementedError();
   }
 }
