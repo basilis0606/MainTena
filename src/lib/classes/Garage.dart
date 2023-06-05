@@ -5,8 +5,8 @@ class Garage {
 
   Garage();
 
-  void addNewVeh(
-      String name, String plateNumber, String model, String brand, int miles) {
+  void addNewVeh(String name, String plateNumber, String model, String brand,
+      double miles) {
     vehicles.add(Vehicle(
         name: name,
         plateNumber: plateNumber,
