@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:try_project/classes/Expense.dart';
 import 'package:try_project/classes/ServiceManual.dart';
@@ -25,7 +24,7 @@ class Vehicle {
 
   Vehicle(
       {required this.name,
-      image,
+      this.image,
       required this.plateNumber,
       required this.model,
       required this.brand,
