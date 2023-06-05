@@ -19,6 +19,6 @@ class Activity {
   }
 
   List<Review> getRecentReviews() {
-    throw UnimplementedError();
+    return reviews.sublist(0, 10);
   }
 }
