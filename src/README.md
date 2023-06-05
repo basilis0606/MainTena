@@ -26,5 +26,5 @@ All of the written code is included in the lib folder
     │   ├── widgets/
     |   |   |── widget1.dart
     |   |   |── widget2.dart
-    └── class ...
+    └── main.dart
 ```
