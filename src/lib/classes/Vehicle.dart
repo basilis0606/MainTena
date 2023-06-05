@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:try_project/classes/Expense.dart';
-import 'package:try_project/classes/ServiceManual.dart';
+import 'Expense.dart';
+import 'ServiceManual.dart';
+import 'Notification.dart';
+import 'Fuel.dart';
+import 'Maintenance.dart';
+import 'Damage.dart';
+import 'Upgrade.dart';
+import 'Insurance.dart';
 
 class Vehicle {
   String name;
@@ -42,5 +48,27 @@ class Vehicle {
         date: date,
         currency: currency,
         notification: notification));
+  }
+
+  List<Expense> filterExpenses(List<String> types) {
+    List<Expense> filteredExpenses = [];
+
+    for (var expense in expenses_2) {
+      if (expense.notification is Maintenance &&
+          types.contains('Maintenance')) {
+        filteredExpenses.add(expense);
+      } else if (expense.notification is Fuel && types.contains('Fuel')) {
+        filteredExpenses.add(expense);
+      } else if (expense.notification is Damage && types.contains('Damage')) {
+        filteredExpenses.add(expense);
+      } else if (expense.notification is Upgrade && types.contains('Upgrade')) {
+        filteredExpenses.add(expense);
+      } else if (expense.notification is Insurance &&
+          types.contains('Insurance')) {
+        filteredExpenses.add(expense);
+      }
+    }
+
+    return filteredExpenses;
   }
 }
