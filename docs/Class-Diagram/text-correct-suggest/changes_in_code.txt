@@ -8,3 +8,7 @@ addReview() -> addReview(double,string)
 showAllReviews() -> getReviews()
 Remove highlightShops
 Remove getRecentActivity();
+editPost(int) -> editPost(int, str,str)
+editComment(int) -> editComment(int, str)
+editReview(int) -> editReview(int,double,str)
+adders in Activity
