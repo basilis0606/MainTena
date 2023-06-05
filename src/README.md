@@ -20,6 +20,11 @@ All of the written code is included in the lib folder
     |   |   |── class2.dart
     │   ├── fragments/
     |   |   |── fragment1.dart
-    |   |   |── fragment2.dart 
+    |   |   |── fragment2.dart
+    │   ├── pages/
+    |   |   |── home_page.dart
+    │   ├── widgets/
+    |   |   |── widget1.dart
+    |   |   |── widget2.dart
     └── class ...
 ```
