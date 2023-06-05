@@ -33,4 +33,16 @@ class Activity {
   void editReview(int reviewIndex, double rating, String newText) {
     reviews[reviewIndex].editReview(rating, newText);
   }
+
+  void addPost(String title, String text) {
+    posts.add(Post(title, text));
+  }
+
+  void addComment(String comment) {
+    comments.add(Comment(comment));
+  }
+
+  void addReview(double rating, String text) {
+    reviews.add(Review(rating, text));
+  }
 }
