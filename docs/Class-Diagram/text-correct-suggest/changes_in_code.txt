@@ -13,3 +13,4 @@ editComment(int) -> editComment(int, str)
 editReview(int) -> editReview(int,double,str)
 adders in Activity
 removed editAttributes from vehicles
+ServiceManual added manually ignore
