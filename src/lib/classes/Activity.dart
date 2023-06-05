@@ -21,4 +21,16 @@ class Activity {
   List<Review> getRecentReviews() {
     return reviews.sublist(0, 10);
   }
+
+  void editPost(int postIndex, String newTitle, String newText) {
+    posts[postIndex].editPost(newTitle, newText);
+  }
+
+  void editComment(int commentIndex, String newText) {
+    comments[commentIndex].editComment(newText);
+  }
+
+  void editReview(int reviewIndex, double rating, String newText) {
+    reviews[reviewIndex].editReview(rating, newText);
+  }
 }
