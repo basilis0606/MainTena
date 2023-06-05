@@ -14,10 +14,6 @@ class ServiceManual {
         description: description));
   }
 
-  void deleteNotification(notif.Notification notification) {
-    notifications.remove(notification);
-  }
-
   void upgradeSuggestions() {
     // to be implemented
     throw UnimplementedError();
