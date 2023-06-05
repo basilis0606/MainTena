@@ -18,7 +18,7 @@ class ServiceManual {
     notifications.remove(notification);
   }
 
-  void UpgradeSuggestions() {
+  void upgradeSuggestions() {
     // to be implemented
     throw UnimplementedError();
   }
