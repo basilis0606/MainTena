@@ -22,3 +22,17 @@
     <a href="https://github.com/basilis0606/MainTena//issues">Request Feature</a>
   </p>
 </div>
+
+<!-- ABOUT THE PROJECT -->
+### Built With
+
+* [![Dart][Dart-ico]][Dart-url]
+* [![Flutter][Flutter-ico]][Flutter-url]
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[Flutter-url]: https://flutter.dev/
+[Flutter-ico]: https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white
+[Dart-ico]: https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white
+[Dart-url]: https://dart.dev/
