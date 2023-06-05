@@ -9,7 +9,7 @@ class Map {
   }
 
   List<RepairShop> getClosestRepairShops(Location location, int quantity,
-      {int? serviceId}) {
+      [int? serviceId]) {
     if (serviceId != null) {
       // Filter repair shops that can provide the specified service
       List<RepairShop> filteredRepairShops = repairShops!
