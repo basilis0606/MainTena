@@ -23,4 +23,8 @@ class Map {
       return repairShops!.sublist(0, quantity);
     }
   }
+
+  getRepairShops() {
+    return repairShops;
+  }
 }
