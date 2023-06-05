@@ -7,4 +7,9 @@ class User {
   String username;
   String email;
   String phoneNumber;
+  bool isMember;
+  Garage garage;
+  Newsfeed newsfeed = Newsfeed();
+  Forum forum = Forum();
+  Activity activity = Activity();
 }
