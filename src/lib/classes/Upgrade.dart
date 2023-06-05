@@ -1,4 +1,4 @@
-import 'package:try_project/classes/ServiceTask.dart';
+import 'ServiceTask.dart';
 
 class Upgrade extends ServiceTask {
   String type;
