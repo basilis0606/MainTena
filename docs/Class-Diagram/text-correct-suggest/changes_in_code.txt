@@ -7,3 +7,4 @@ work_hours -> opening_hours, closing_hours
 addReview() -> addReview(double,string)
 showAllReviews() -> getReviews()
 Remove highlightShops
+Remove getRecentActivity();
