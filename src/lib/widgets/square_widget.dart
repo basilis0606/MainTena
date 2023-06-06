@@ -5,12 +5,14 @@ import 'package:intl/intl.dart';
 
 class SquareWidget2 extends StatelessWidget {
   final double size = 35;
-  final Color color = Colors.blueGrey;
+  final Color color = const Color(0xFF333333);
+  final Color textColor = const Color(0xFFE5E5E5);
   final String icon;
   final String upLeftText;
   final DateTime date;
   final String downLeftText;
   final double? progress;
+  final String? cost;
 
   const SquareWidget2(
       {Key? key,
@@ -18,7 +20,8 @@ class SquareWidget2 extends StatelessWidget {
       required this.upLeftText,
       required this.date,
       required this.downLeftText,
-      this.progress})
+      this.progress,
+      this.cost})
       : super(key: key);
 
   @override
@@ -64,7 +67,8 @@ class SquareWidget2 extends StatelessWidget {
                       Expanded(
                         child: Text(
                           upLeftText,
-                          style: const TextStyle(fontWeight: FontWeight.w600),
+                          style: TextStyle(
+                              fontWeight: FontWeight.w600, color: textColor),
                         ),
                       ),
                       // Add column with text
@@ -75,8 +79,9 @@ class SquareWidget2 extends StatelessWidget {
                             padding: const EdgeInsets.only(right: 16.0),
                             child: Text(
                               upRightText,
-                              style:
-                                  const TextStyle(fontWeight: FontWeight.w600),
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  color: textColor),
                             ),
                           ),
                         ),
@@ -112,8 +117,9 @@ class SquareWidget2 extends StatelessWidget {
                     children: [
                       Expanded(
                           child: Text(downLeftText,
-                              style: const TextStyle(
-                                  fontWeight: FontWeight.w600))),
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  color: textColor))),
                       const Expanded(
                         child: SizedBox(),
                       ),
@@ -125,8 +131,24 @@ class SquareWidget2 extends StatelessWidget {
                               padding: const EdgeInsets.only(right: 16.0),
                               child: Text(
                                 "${(progress! * 100).toInt()}%",
-                                style: const TextStyle(
-                                    fontWeight: FontWeight.w600),
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w600,
+                                    color: textColor),
+                              ),
+                            ),
+                          ),
+                        ),
+                      if (cost != null)
+                        Expanded(
+                          child: Align(
+                            alignment: Alignment.centerRight,
+                            child: Padding(
+                              padding: const EdgeInsets.only(right: 16.0),
+                              child: Text(
+                                "$cost",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w600,
+                                    color: textColor),
                               ),
                             ),
                           ),

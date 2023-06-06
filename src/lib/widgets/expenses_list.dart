@@ -18,8 +18,9 @@ class SquareList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Add padding to the listview
-    return ListView.separated(
+    return Expanded(
+        child: ListView.separated(
+      shrinkWrap: true,
       itemCount: my_veh.expenses_2.length,
       itemBuilder: (BuildContext context, int index) {
         if (my_veh.expenses_2[index].notification is Maintenance) {
@@ -29,6 +30,8 @@ class SquareList extends StatelessWidget {
             date: my_veh.expenses_2[index].date,
             downLeftText:
                 (my_veh.expenses_2[index].notification as Maintenance).type,
+            cost: my_veh.expenses_2[index].currency.toString() +
+                my_veh.expenses_2[index].amount.toString(),
           );
         } else if (my_veh.expenses_2[index].notification is Fuel) {
           return SquareWidget2(
@@ -38,6 +41,8 @@ class SquareList extends StatelessWidget {
             downLeftText: (my_veh.expenses_2[index].notification as Fuel)
                 .liters
                 .toString(),
+            cost: my_veh.expenses_2[index].currency.toString() +
+                my_veh.expenses_2[index].amount.toString(),
           );
         } else if (my_veh.expenses_2[index].notification is Damage) {
           return SquareWidget2(
@@ -46,6 +51,8 @@ class SquareList extends StatelessWidget {
             date: my_veh.expenses_2[index].date,
             downLeftText:
                 (my_veh.expenses_2[index].notification as Damage).type,
+            cost: my_veh.expenses_2[index].currency.toString() +
+                my_veh.expenses_2[index].amount.toString(),
           );
         } else if (my_veh.expenses_2[index].notification is Upgrade) {
           return SquareWidget2(
@@ -54,6 +61,8 @@ class SquareList extends StatelessWidget {
             date: my_veh.expenses_2[index].date,
             downLeftText:
                 (my_veh.expenses_2[index].notification as Upgrade).type,
+            cost: my_veh.expenses_2[index].currency.toString() +
+                my_veh.expenses_2[index].amount.toString(),
           );
         } else if (my_veh.expenses_2[index].notification is Insurance) {
           return SquareWidget2(
@@ -62,12 +71,14 @@ class SquareList extends StatelessWidget {
             date: my_veh.expenses_2[index].date,
             downLeftText:
                 (my_veh.expenses_2[index].notification as Insurance).type,
+            cost: my_veh.expenses_2[index].currency.toString() +
+                my_veh.expenses_2[index].amount.toString(),
           );
         }
       },
       separatorBuilder: (BuildContext context, int index) {
         return const SizedBox(height: 50);
       },
-    );
+    ));
   }
 }

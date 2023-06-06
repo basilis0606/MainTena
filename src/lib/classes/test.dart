@@ -37,12 +37,11 @@ class Test {
         estimatedCost: 10.0,
         description: "oil change");
 
-    v.createExpense(10.0, DateTime.now(), "USD", f1);
-    v.createExpense(10.0, DateTime.now(), "USD", f2);
-    v.createExpense(10.0, DateTime.now(), "USD", m1);
-    v.createExpense(10.0, DateTime.now(), "USD", m2);
-
-    print(v.expenses_2);
+    v.createExpense(10.0, DateTime.now(), "\$", f1);
+    v.createExpense(10.0, DateTime.now(), "\$", f2);
+    v.createExpense(10.0, DateTime.now(), "\$", m1);
+    v.createExpense(10.0, DateTime.now(), "\$", m2);
   }
 }
-void main(){}
+
+void main() {}
