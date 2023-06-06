@@ -2,9 +2,6 @@ import 'Location.dart';
 import 'RepairShop.dart';
 
 class Map {
-
-Location user_location;
-
   List<RepairShop>? repairShops;
 
   Map([List<RepairShop>? repairShops]) {
@@ -29,10 +26,5 @@ Location user_location;
 
   getRepairShops() {
     return repairShops;
-  }
-  getnewposition()
-  {
-    
-    this.user_location= Location();
   }
 }
