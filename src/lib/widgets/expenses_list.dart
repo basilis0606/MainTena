@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import '../classes/Vehicle.dart';
-import '../classes/Expense.dart';
-import '../classes/Notification.dart' as notif;
 import '../classes/Maintenance.dart';
 import '../classes/Fuel.dart';
-import '../classes/ServiceManual.dart';
 import '../classes/Upgrade.dart';
 import '../classes/Insurance.dart';
 import '../classes/Damage.dart';
@@ -13,8 +10,20 @@ import 'square_widget.dart';
 
 class SquareList extends StatelessWidget {
   final Vehicle my_veh;
+  final String? filter;
+  List<String> filters = [
+    'Maintenance',
+    'Fuel',
+    'Upgrades',
+    'Insurance',
+    'Damage'
+  ];
 
-  const SquareList({Key? key, required this.my_veh}) : super(key: key);
+  SquareList({Key? key, required this.my_veh, this.filter}) : super(key: key) {
+    if (filter != null && filter != 'All') {
+      filters = [filter!];
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +32,8 @@ class SquareList extends StatelessWidget {
       shrinkWrap: true,
       itemCount: my_veh.expenses_2.length,
       itemBuilder: (BuildContext context, int index) {
-        if (my_veh.expenses_2[index].notification is Maintenance) {
+        if (my_veh.expenses_2[index].notification is Maintenance &&
+            filters.contains('Maintenance')) {
           return SquareWidget2(
             icon: 'assets/icons/maintenance.svg',
             upLeftText: "${my_veh.expenses_2[index].notification.mileage} km,",
@@ -33,7 +43,8 @@ class SquareList extends StatelessWidget {
             cost: my_veh.expenses_2[index].currency.toString() +
                 my_veh.expenses_2[index].amount.toString(),
           );
-        } else if (my_veh.expenses_2[index].notification is Fuel) {
+        } else if (my_veh.expenses_2[index].notification is Fuel &&
+            filters.contains('Fuel')) {
           return SquareWidget2(
             icon: 'assets/icons/gas.svg',
             upLeftText: "${my_veh.expenses_2[index].notification.mileage} km",
@@ -44,7 +55,8 @@ class SquareList extends StatelessWidget {
             cost: my_veh.expenses_2[index].currency.toString() +
                 my_veh.expenses_2[index].amount.toString(),
           );
-        } else if (my_veh.expenses_2[index].notification is Damage) {
+        } else if (my_veh.expenses_2[index].notification is Damage &&
+            filters.contains('Damage')) {
           return SquareWidget2(
             icon: 'assets/icons/damage.svg',
             upLeftText: "${my_veh.expenses_2[index].notification.mileage} km",
@@ -54,7 +66,8 @@ class SquareList extends StatelessWidget {
             cost: my_veh.expenses_2[index].currency.toString() +
                 my_veh.expenses_2[index].amount.toString(),
           );
-        } else if (my_veh.expenses_2[index].notification is Upgrade) {
+        } else if (my_veh.expenses_2[index].notification is Upgrade &&
+            filters.contains('Upgrades')) {
           return SquareWidget2(
             icon: 'assets/icons/upgrade.svg',
             upLeftText: "${my_veh.expenses_2[index].notification.mileage} km",
@@ -64,7 +77,8 @@ class SquareList extends StatelessWidget {
             cost: my_veh.expenses_2[index].currency.toString() +
                 my_veh.expenses_2[index].amount.toString(),
           );
-        } else if (my_veh.expenses_2[index].notification is Insurance) {
+        } else if (my_veh.expenses_2[index].notification is Insurance &&
+            filters.contains('Insurance')) {
           return SquareWidget2(
             icon: 'assets/icons/insurance.svg',
             upLeftText: "${my_veh.expenses_2[index].notification.mileage} km",
