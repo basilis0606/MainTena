@@ -1,17 +1,17 @@
-editPost() -> editPost(String,String)
-unlike(), undislike()
-newPost() -> newPost(String, String)
-addNewsletter(int) -> addNewsletter(Newsletter)
-Newsfeed.filter() -> List<news> filter(String)
-work_hours -> opening_hours, closing_hours
-addReview() -> addReview(double,string)
-showAllReviews() -> getReviews()
-Remove highlightShops
-Remove getRecentActivity();
-editPost(int) -> editPost(int, str,str)
-editComment(int) -> editComment(int, str)
-editReview(int) -> editReview(int,double,str)
-adders in Activity
-removed editAttributes from vehicles
-ServiceManual added manually ignore
-phone -> phoneNumber (in user and repairShop)
+editPost() -> editPost(String,String) //done
+unlike(), undislike() //done
+newPost() -> newPost(String, String)//done
+addNewsletter(int) -> addNewsletter(Newsletter)//done
+Newsfeed.filter() -> List<news> filter(String)//done
+work_hours -> opening_hours, closing_hours//done
+addReview() -> addReview(double,string)//done
+showAllReviews() -> getReviews()//done
+Remove highlightShops//done
+Remove getRecentActivity();//done
+editPost(int) -> editPost(int, str,str)//done
+editComment(int) -> editComment(int, str)//done
+editReview(int) -> editReview(int,double,str)//done
+adders in Activity//done
+removed editAttributes from vehicles//done
+ServiceManual added manually ignore//done
+phone -> phoneNumber (in user and repairShop)//done
