@@ -1,5 +1,5 @@
-import 'package:try_project/classes/Comment.dart';
-import 'dart:core';
+import 'Notification.dart' as notif;
+
 class Fuel extends notif.Notification {
   double liters;
 
@@ -8,9 +8,7 @@ class Fuel extends notif.Notification {
       required mileage,
       required date,
       required estimatedCost,
-      required description
-      }
-      )
+      required description})
       : super(
             mileage: mileage,
             date: date,
