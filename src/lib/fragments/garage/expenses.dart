@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:try_project/classes/Maintenance.dart';
 import 'package:try_project/classes/Vehicle.dart';
-import 'package:try_project/classes/Fuel.dart';
-import 'package:try_project/widgets/square_widget.dart';
 import '../../widgets/expenses_list.dart';
 
 enum SampleItem2 { itemOne, itemTwo, itemThree }
@@ -32,14 +29,15 @@ class _ExpensesState extends State<Expenses> {
             });
           },
         ),
-        Padding(
+        Expanded(
+            child: Padding(
           padding: const EdgeInsets.symmetric(
             horizontal: 40,
             vertical: 8,
           ),
           child:
               SquareList(my_veh: widget.my_veh, filter: getFilterCondition()),
-        ),
+        ))
       ],
     );
   }
