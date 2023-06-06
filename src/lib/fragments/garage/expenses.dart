@@ -3,7 +3,7 @@ import 'package:try_project/classes/Maintenance.dart';
 import 'package:try_project/classes/Vehicle.dart';
 import 'package:try_project/classes/Fuel.dart';
 import 'package:try_project/widgets/square_widget.dart';
-import 'package:try_project/widgets/2_square_widget.dart';
+import 'package:try_project/widgets/square_widget.dart';
 
 class Expenses extends StatelessWidget {
   final Vehicle my_veh;
