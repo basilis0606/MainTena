@@ -23,7 +23,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'NavigationDrawer Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        useMaterial3: true,
+        colorSchemeSeed: const Color(0xff6750a4),
       ),
       home: HomePage(veh: t.v),
     );

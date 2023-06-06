@@ -11,6 +11,7 @@ import 'square_widget.dart';
 class SquareList extends StatelessWidget {
   final Vehicle my_veh;
   final String? filter;
+  bool isFiltered = true;
   List<String> filters = [
     'Maintenance',
     'Fuel',
@@ -20,15 +21,15 @@ class SquareList extends StatelessWidget {
   ];
 
   SquareList({Key? key, required this.my_veh, this.filter}) : super(key: key) {
-    if (filter != null && filter != 'All') {
+    if (filter != null && filters.contains(filter)) {
       filters = [filter!];
+      print([filter!]);
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-        child: ListView.separated(
+    return ListView.separated(
       shrinkWrap: true,
       itemCount: my_veh.expenses_2.length,
       itemBuilder: (BuildContext context, int index) {
@@ -88,11 +89,19 @@ class SquareList extends StatelessWidget {
             cost: my_veh.expenses_2[index].currency.toString() +
                 my_veh.expenses_2[index].amount.toString(),
           );
+        } else {
+          isFiltered = false;
+          return Container();
         }
       },
       separatorBuilder: (BuildContext context, int index) {
-        return const SizedBox(height: 50);
+        if (isFiltered) {
+          return const SizedBox(height: 50);
+        } else {
+          isFiltered = true;
+          return Container();
+        }
       },
-    ));
+    );
   }
 }
