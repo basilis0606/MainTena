@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:try_project/classes/Vehicle.dart';
 import 'package:try_project/fragments/first_car.dart';
 import 'package:try_project/fragments/first_fragment.dart';
@@ -47,12 +49,30 @@ class HomePageState extends State<HomePage> {
   _getDrawerItemWidget(int pos) {
     if (pos < widget.cars.length) {
       return FirstCar(veh: widget.veh);
-    } else if (pos == widget.cars.length) {
-      return const FirstFragment();
-    } else if (pos == widget.cars.length + 1) {
-      return const SecondFragment();
-    } else if (pos == widget.cars.length + 2) {
-      return const ThirdFragment();
+    } else if (pos == widget.cars.length ||
+        pos == widget.cars.length + 1 ||
+        pos == widget.cars.length + 2) {
+      WidgetsBinding.instance!.addPostFrameCallback((_) {
+        final OverlayState overlayState = Overlay.of(context)!;
+        final OverlayEntry overlayEntry = OverlayEntry(
+          builder: (context) => Positioned(
+            top: MediaQuery.of(context).size.height * 0.4,
+            width: MediaQuery.of(context).size.width,
+            child: AlertDialog(
+              title: const Text('Not Implemented'),
+              content: const Text('This feature is not yet implemented.'),
+            ),
+          ),
+        );
+
+        overlayState.insert(overlayEntry);
+
+        Timer(const Duration(seconds: 1), () {
+          overlayEntry.remove();
+        });
+      });
+
+      return null;
     } else {
       return const Text("Error");
     }
@@ -60,7 +80,9 @@ class HomePageState extends State<HomePage> {
 
   _onSelectItem(int index) {
     setState(() => _selectedDrawerIndex = index);
-    Navigator.of(context).pop(); // close the drawer
+    if (index < widget.cars.length) {
+      Navigator.of(context).pop(); // close the drawer
+    }
   }
 
   @override
