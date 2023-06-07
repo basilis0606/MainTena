@@ -59,8 +59,8 @@ class HomePageState extends State<HomePage> {
             top: MediaQuery.of(context).size.height * 0.4,
             width: MediaQuery.of(context).size.width,
             child: AlertDialog(
-              title: const Text('Not Implemented'),
-              content: const Text('This feature is not yet implemented.'),
+              title: const Text('Not Accessible'),
+              content: const Text('This feature is not accessible yet.'),
             ),
           ),
         );
