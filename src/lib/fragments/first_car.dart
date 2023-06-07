@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:try_project/classes/Vehicle.dart';
 import 'package:try_project/fragments/garage/expenses.dart';
+import 'garage/garage_maintenance.dart';
 
 class FirstCar extends StatelessWidget {
   final Vehicle veh;
@@ -32,7 +33,7 @@ class FirstCar extends StatelessWidget {
           body: TabBarView(
             children: [
               Expenses(my_veh: this.veh), // Pass the named parameter correctly
-              Icon(Icons.directions_car),
+              MaintenanceFragment(vehicle: this.veh),
               Icon(Icons.directions_transit),
               Text("Error"),
             ],

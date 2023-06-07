@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:try_project/classes/Vehicle.dart';
 import '../../widgets/expenses_list.dart';
 
-enum SampleItem2 { itemOne, itemTwo, itemThree }
-
 enum SampleItem { All, Maintenance, Fuel, Upgrades, Insurance, Damage }
 
 class Expenses extends StatefulWidget {
