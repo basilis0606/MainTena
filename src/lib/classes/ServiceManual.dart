@@ -7,7 +7,7 @@ class ServiceManual {
   ServiceManual({required this.mileage, required this.notifications});
 
   void createNotification(notif.Notification notification) {
-    notifications!.add(notification);
+    notifications.add(notification);
   }
 
   void upgradeSuggestions() {
