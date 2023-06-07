@@ -1,22 +1,11 @@
 // Import all classes in one line
+import 'package:flutter/services.dart';
+
 import 'User.dart';
 import 'Vehicle.dart';
 
 class runIt {
   User u = User('John Doe', 'example@mymail.com', '1234567890', true);
-
-  Vehicle v = Vehicle(
-      name: "My Car",
-      plateNumber: "ABC1234",
-      model: "Model",
-      brand: "Brand",
-      miles: 1000.0);
-  Vehicle v2 = Vehicle(
-      name: "My Car",
-      plateNumber: "ABC1234",
-      model: "Model",
-      brand: "Brand",
-      miles: 1000.0);
 
   void initForum() {
     for (int i = 1; i <= 20; i++) {
@@ -32,17 +21,7 @@ class runIt {
   }
 
   void initGarage() {
-    u.garage.addNewVeh(Vehicle(
-        name: "name",
-        plateNumber: plateNumber,
-        model: model,
-        brand: brand,
-        miles: miles));
-    u.garage.addNewVeh(Vehicle(
-        name: "name",
-        plateNumber: plateNumber,
-        model: model,
-        brand: brand,
-        miles: miles));
+    u.addNewVehicle("Car1", "ABC123", "SUV", "Ford", 10000.75);
+    u.addNewVehicle("Car2", "XYZ987", "Panda", "Fiat", 1000.84);
   }
 }
