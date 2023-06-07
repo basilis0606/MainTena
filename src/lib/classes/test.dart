@@ -1,6 +1,7 @@
 import 'Fuel.dart';
 import 'Maintenance.dart';
 import 'Vehicle.dart';
+import 'ServiceManual.dart';
 
 class Test {
   Vehicle v = Vehicle(
@@ -96,18 +97,30 @@ class Test {
         estimatedCost: 10.0,
         description: "oil change");
 
+    v.manual.createNotification(f1);
+    v.manual.createNotification(f2);
+    v.manual.createNotification(f3);
+    v.manual.createNotification(f4);
+    v.manual.createNotification(f5);
+    v.manual.createNotification(f6);
+    v.manual.createNotification(m1);
+    v.manual.createNotification(m2);
+    v.manual.createNotification(m3);
+    v.manual.createNotification(m4);
+    v.manual.createNotification(m5);
+    v.manual.createNotification(m6);
+    v.manual.createNotification(m7);
+
     v.createExpense(10.0, DateTime.now(), "\$", f1);
     v.createExpense(25.0, DateTime.now(), "\$", f2);
     v.createExpense(10.0, DateTime.now(), "\$", f3);
     v.createExpense(25.0, DateTime.now(), "\$", f4);
     v.createExpense(10.0, DateTime.now(), "\$", f5);
-    v.createExpense(25.0, DateTime.now(), "\$", f6);
     v.createExpense(30.0, DateTime.now(), "\$", m1);
     v.createExpense(60.0, DateTime.now(), "\$", m2);
     v.createExpense(10.0, DateTime.now(), "\$", m3);
     v.createExpense(25.0, DateTime.now(), "\$", m4);
     v.createExpense(30.0, DateTime.now(), "\$", m5);
     v.createExpense(60.0, DateTime.now(), "\$", m6);
-    v.createExpense(10.0, DateTime.now(), "\$", m7);
   }
 }
