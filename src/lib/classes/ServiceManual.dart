@@ -6,12 +6,8 @@ class ServiceManual {
 
   ServiceManual({required this.mileage, this.notifications});
 
-  void createNotification(milage, date, estimatedCost, description) {
-    notifications!.add(notif.Notification(
-        mileage: milage,
-        date: date,
-        estimatedCost: estimatedCost,
-        description: description));
+  void createNotification(notif.Notification notification) {
+    notifications!.add(notification);
   }
 
   void upgradeSuggestions() {
