@@ -20,22 +20,42 @@ class _ExpensesState extends State<Expenses> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        PopupMenuExample(
-          onItemSelected: (SampleItem item) {
-            setState(() {
-              selectedMenu = item;
-            });
-          },
+        Align(
+          alignment: Alignment.topRight,
+          child: Padding(
+            padding: const EdgeInsets.only(right: 45, top: 16, bottom: 8),
+            child: PopupMenuExample(
+              onItemSelected: (SampleItem item) {
+                setState(() {
+                  selectedMenu = item;
+                });
+              },
+            ),
+          ),
+        ),
+        const Align(
+          alignment: Alignment.centerLeft,
+          child: Padding(
+            padding: EdgeInsets.only(left: 40, bottom: 10),
+            child: Text(
+              "Recent Expenses",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
         ),
         Expanded(
-            child: Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 40,
-            vertical: 8,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 40,
+              vertical: 8,
+            ),
+            child:
+                SquareList(my_veh: widget.my_veh, filter: getFilterCondition()),
           ),
-          child:
-              SquareList(my_veh: widget.my_veh, filter: getFilterCondition()),
-        ))
+        ),
       ],
     );
   }
@@ -72,45 +92,41 @@ class _PopupMenuExampleState extends State<PopupMenuExample> {
 
   @override
   Widget build(BuildContext context) {
-    return Align(
-      // Wrap PopupMenuButton with Align
-      alignment: Alignment.center,
-      child: PopupMenuButton<SampleItem>(
-        icon: const Icon(Icons.filter_list),
-        initialValue: selectedMenu,
-        onSelected: (SampleItem item) {
-          setState(() {
-            selectedMenu = item;
-          });
-          widget.onItemSelected(item);
-        },
-        itemBuilder: (BuildContext context) => <PopupMenuEntry<SampleItem>>[
-          const PopupMenuItem<SampleItem>(
-            value: SampleItem.All,
-            child: Text('All'),
-          ),
-          const PopupMenuItem<SampleItem>(
-            value: SampleItem.Maintenance,
-            child: Text('Maintenance'),
-          ),
-          const PopupMenuItem<SampleItem>(
-            value: SampleItem.Fuel,
-            child: Text('Fuel'),
-          ),
-          const PopupMenuItem<SampleItem>(
-            value: SampleItem.Upgrades,
-            child: Text('Upgrades'),
-          ),
-          const PopupMenuItem<SampleItem>(
-            value: SampleItem.Insurance,
-            child: Text('Insurance'),
-          ),
-          const PopupMenuItem<SampleItem>(
-            value: SampleItem.Damage,
-            child: Text('Damage'),
-          ),
-        ],
-      ),
+    return PopupMenuButton<SampleItem>(
+      icon: const Icon(Icons.filter_list),
+      initialValue: selectedMenu,
+      onSelected: (SampleItem item) {
+        setState(() {
+          selectedMenu = item;
+        });
+        widget.onItemSelected(item);
+      },
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<SampleItem>>[
+        const PopupMenuItem<SampleItem>(
+          value: SampleItem.All,
+          child: Text('All'),
+        ),
+        const PopupMenuItem<SampleItem>(
+          value: SampleItem.Maintenance,
+          child: Text('Maintenance'),
+        ),
+        const PopupMenuItem<SampleItem>(
+          value: SampleItem.Fuel,
+          child: Text('Fuel'),
+        ),
+        const PopupMenuItem<SampleItem>(
+          value: SampleItem.Upgrades,
+          child: Text('Upgrades'),
+        ),
+        const PopupMenuItem<SampleItem>(
+          value: SampleItem.Insurance,
+          child: Text('Insurance'),
+        ),
+        const PopupMenuItem<SampleItem>(
+          value: SampleItem.Damage,
+          child: Text('Damage'),
+        ),
+      ],
     );
   }
 }

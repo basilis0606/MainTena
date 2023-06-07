@@ -52,22 +52,22 @@ class HomePageState extends State<HomePage> {
     } else if (pos == widget.cars.length ||
         pos == widget.cars.length + 1 ||
         pos == widget.cars.length + 2) {
-      WidgetsBinding.instance!.addPostFrameCallback((_) {
-        final OverlayState overlayState = Overlay.of(context)!;
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        final OverlayState overlayState = Overlay.of(context);
         final OverlayEntry overlayEntry = OverlayEntry(
           builder: (context) => Positioned(
             top: MediaQuery.of(context).size.height * 0.4,
             width: MediaQuery.of(context).size.width,
-            child: AlertDialog(
-              title: const Text('Not Implemented'),
-              content: const Text('This feature is not yet implemented.'),
+            child: const AlertDialog(
+              title: Text('Not Accessible'),
+              content: Text('This feature is not accessible yet.'),
             ),
           ),
         );
 
         overlayState.insert(overlayEntry);
 
-        Timer(const Duration(seconds: 1), () {
+        Timer(const Duration(seconds: 2), () {
           overlayEntry.remove();
         });
       });
