@@ -14,7 +14,7 @@ class Vehicle {
   String plateNumber;
   String model;
   String brand;
-  ServiceManual? manual;
+  ServiceManual manual;
   List<Expense> expenses_2 = [];
 
   Vehicle.withManual(
@@ -28,16 +28,16 @@ class Vehicle {
     this.expenses_2 = expenses_2 ?? [];
   }
 
-  Vehicle(
-      {required this.name,
-      this.image,
-      required this.plateNumber,
-      required this.model,
-      required this.brand,
-      required double miles,
-      List<Expense>? expenses_2}) {
+  Vehicle({
+    required this.name,
+    this.image,
+    required this.plateNumber,
+    required this.model,
+    required this.brand,
+    required double miles,
+    List<Expense>? expenses_2,
+  }) : manual = ServiceManual(mileage: miles, notifications: []) {
     this.expenses_2 = expenses_2 ?? [];
-    manual = ServiceManual(mileage: miles, notifications: []);
   }
 
   void createExpense(amount, date, currency, notification) {
