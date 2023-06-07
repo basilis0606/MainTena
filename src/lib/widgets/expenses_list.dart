@@ -33,6 +33,7 @@ class SquareList extends StatelessWidget {
       shrinkWrap: true,
       itemCount: my_veh.expenses_2.length,
       itemBuilder: (BuildContext context, int index) {
+        index = my_veh.expenses_2.length - index - 1;
         if (my_veh.expenses_2[index].notification is Maintenance &&
             filters.contains('Maintenance')) {
           return SquareWidget2(
