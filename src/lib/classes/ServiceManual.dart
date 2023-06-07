@@ -2,9 +2,9 @@ import 'package:try_project/classes/Notification.dart' as notif;
 
 class ServiceManual {
   double mileage;
-  List<notif.Notification>? notifications = [];
+  List<notif.Notification> notifications;
 
-  ServiceManual({required this.mileage, this.notifications});
+  ServiceManual({required this.mileage, required this.notifications});
 
   void createNotification(notif.Notification notification) {
     notifications!.add(notification);
@@ -16,10 +16,10 @@ class ServiceManual {
   }
 
   void manuallyDone(int index) {
-    notifications![index].complete();
+    notifications[index].complete();
   }
 
   void manuallyIgnore(int index) {
-    notifications![index].ignore();
+    notifications[index].ignore();
   }
 }
