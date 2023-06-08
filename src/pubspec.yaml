@@ -70,6 +70,9 @@ flutter:
   assets:
     - assets/icons/gas.svg
     - assets/icons/maintenance.svg
+    - assets/icons/insurance.svg
+    - assets/icons/upgrade.svg
+    - assets/icons/damage.svg
     - assets/logo.png
   #   - images/a_dot_ham.jpeg
 
