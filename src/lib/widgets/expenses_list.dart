@@ -23,7 +23,6 @@ class SquareList extends StatelessWidget {
   SquareList({Key? key, required this.my_veh, this.filter}) : super(key: key) {
     if (filter != null && filters.contains(filter)) {
       filters = [filter!];
-      print([filter!]);
     }
   }
 
