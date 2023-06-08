@@ -6,6 +6,7 @@ import 'package:try_project/fragments/first_fragment.dart';
 import 'package:try_project/fragments/second_fragment.dart';
 import 'package:try_project/fragments/third_fragment.dart';
 import 'package:flutter/material.dart';
+import '../classes/User.dart';
 
 class DrawerItem {
   String title;
@@ -15,6 +16,7 @@ class DrawerItem {
 
 class HomePage extends StatefulWidget {
   final Vehicle veh;
+  final User user;
 
   final drawerItems = [
     DrawerItem("Map", Icons.map),
@@ -27,7 +29,7 @@ class HomePage extends StatefulWidget {
     DrawerItem("Car 2", Icons.car_repair)
   ];
 
-  HomePage({Key? key, required this.veh}) : super(key: key);
+  HomePage({Key? key, required this.veh, required this.user}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
@@ -48,7 +50,7 @@ class HomePageState extends State<HomePage> {
 
   _getDrawerItemWidget(int pos) {
     if (pos < widget.cars.length) {
-      return FirstCar(veh: widget.veh);
+      return FirstCar(veh: widget.user.garage.vehicles[0]);
     } else if (pos == widget.cars.length ||
         pos == widget.cars.length + 1 ||
         pos == widget.cars.length + 2) {

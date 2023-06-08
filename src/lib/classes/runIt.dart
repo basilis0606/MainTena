@@ -3,9 +3,23 @@ import 'package:flutter/services.dart';
 
 import 'User.dart';
 import 'Vehicle.dart';
+import 'Fuel.dart';
+import 'Maintenance.dart';
+import 'Damage.dart';
+import 'Upgrade.dart';
+import 'Insurance.dart';
 
 class runIt {
   User u = User('John Doe', 'example@mymail.com', '1234567890', true);
+
+  runIt() {
+    initForum();
+    initGarage();
+    initVehicle();
+  }
+
+  // getter for user
+  User get user => u;
 
   void initForum() {
     for (int i = 1; i <= 20; i++) {
@@ -25,9 +39,8 @@ class runIt {
     u.addNewVehicle("Car2", "XYZ987", "Panda", "Fiat", 1000.84);
   }
 
-  void initVehicle()
-  {
-     Fuel f1 = Fuel(
+  void initVehicle() {
+    Fuel f1 = Fuel(
         liters: 10.0,
         mileage: 15.0,
         date: DateTime.now(),
@@ -105,9 +118,8 @@ class runIt {
         date: DateTime.now(),
         estimatedCost: 50.0,
         description: "tire replacement");
-    
 
-  Upgrade up1 = Upgrade(
+    Upgrade up1 = Upgrade(
         type: "Nitro",
         serviceTaskId: 21,
         mileage: 1500.0,
@@ -115,15 +127,15 @@ class runIt {
         estimatedCost: 890.0,
         description: "You can run faster");
 
-  Upgrade up2 = Upgrade(
+    Upgrade up2 = Upgrade(
         type: "fancy sit covers",
         serviceTaskId: 22,
         mileage: 30.0,
         date: DateTime.now(),
         estimatedCost: 25.0,
         description: "You can sit better");
-  
-  Upgrade up3 = Upgrade(
+
+    Upgrade up3 = Upgrade(
         type: "Cup holder",
         serviceTaskId: 23,
         mileage: 1000.0,
@@ -131,14 +143,14 @@ class runIt {
         estimatedCost: 10.0,
         description: "You can drink safer");
 
-   Upgrade up4 = Upgrade(
+    Upgrade up4 = Upgrade(
         type: "Gps",
         serviceTaskId: 24,
         mileage: 321.0,
         date: DateTime.now(),
         estimatedCost: 200.0,
         description: "You know where you are");
-        
+
     Damage d1 = Damage(
         type: "paint scratch",
         serviceTaskId: 31,
@@ -156,21 +168,21 @@ class runIt {
         description: "7 years of bad luck");
 
     Insurance i1 = Insurance(
-        completion: 
-        type: "alience",
-        mileage: 33333.0,
-        date: DateTime.now(),
-        estimatedCost: 10.0,
-        description: "alience");
+      completion: DateTime(2026, 6, 15, 10, 30, 0),
+      type: "alience",
+      mileage: 33333.0,
+      date: DateTime.now(),
+      estimatedCost: 10.0,
+      description: "alience",
+    );
 
     Insurance i2 = Insurance(
-        completion: 
+        completion: DateTime(2026, 6, 15, 10, 30, 0),
         type: "mera",
         mileage: 123412.0,
         date: DateTime.now(),
         estimatedCost: 10.0,
         description: "mera");
-
 
     u.garage.vehicles[0].manual.createNotification(f1);
     u.garage.vehicles[0].manual.createNotification(f2);
@@ -186,9 +198,7 @@ class runIt {
     u.garage.vehicles[0].manual.createNotification(d1);
 
     u.garage.vehicles[0].manual.createNotification(i1);
-    
-    
-    
+
     u.garage.vehicles[1].manual.createNotification(f4);
     u.garage.vehicles[1].manual.createNotification(f5);
     u.garage.vehicles[1].manual.createNotification(f6);
@@ -196,7 +206,7 @@ class runIt {
     u.garage.vehicles[1].manual.createNotification(m4);
     u.garage.vehicles[1].manual.createNotification(m5);
     u.garage.vehicles[1].manual.createNotification(m6);
-    
+
     u.garage.vehicles[1].manual.createNotification(up3);
     u.garage.vehicles[1].manual.createNotification(up4);
 
@@ -204,17 +214,16 @@ class runIt {
 
     u.garage.vehicles[1].manual.createNotification(i2);
 
-
-    u.garage.vehicles[1].createExpense(10.0, DateTime.now(), "\$", f1);
-    u.garage.vehicles[1].createExpense(20.0, DateTime.now(), "\$", f2);
-    u.garage.vehicles[1].createExpense(30.0, DateTime.now(), "\$", f3);
-    u.garage.vehicles[1].createExpense(40.0, DateTime.now(), "\$", m1);
-    u.garage.vehicles[1].createExpense(50.0, DateTime.now(), "\$", m2);
-    u.garage.vehicles[1].createExpense(60.0, DateTime.now(), "\$", m3);
-    u.garage.vehicles[1].createExpense(70.0, DateTime.now(), "\$", up1);
-    u.garage.vehicles[1].createExpense(80.0, DateTime.now(), "\$", up2);
-    u.garage.vehicles[1].createExpense(90.0, DateTime.now(), "\$", d1);
-    u.garage.vehicles[1].createExpense(100.0, DateTime.now(), "\$", i1);
+    u.garage.vehicles[0].createExpense(10.0, DateTime.now(), "\$", f1);
+    u.garage.vehicles[0].createExpense(20.0, DateTime.now(), "\$", f2);
+    u.garage.vehicles[0].createExpense(30.0, DateTime.now(), "\$", f3);
+    u.garage.vehicles[0].createExpense(40.0, DateTime.now(), "\$", m1);
+    u.garage.vehicles[0].createExpense(50.0, DateTime.now(), "\$", m2);
+    u.garage.vehicles[0].createExpense(60.0, DateTime.now(), "\$", m3);
+    u.garage.vehicles[0].createExpense(70.0, DateTime.now(), "\$", up1);
+    u.garage.vehicles[0].createExpense(80.0, DateTime.now(), "\$", up2);
+    u.garage.vehicles[0].createExpense(90.0, DateTime.now(), "\$", d1);
+    u.garage.vehicles[0].createExpense(100.0, DateTime.now(), "\$", i1);
 
     u.garage.vehicles[1].createExpense(10.0, DateTime.now(), "\$", f4);
     u.garage.vehicles[1].createExpense(20.0, DateTime.now(), "\$", f5);
@@ -226,9 +235,5 @@ class runIt {
     u.garage.vehicles[1].createExpense(80.0, DateTime.now(), "\$", up4);
     u.garage.vehicles[1].createExpense(90.0, DateTime.now(), "\$", d2);
     u.garage.vehicles[1].createExpense(1000.0, DateTime.now(), "\$", i2);
-
-
-
-
-}
+  }
 }

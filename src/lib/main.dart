@@ -1,10 +1,11 @@
 import 'package:try_project/classes/Fuel.dart';
 import 'package:try_project/classes/Maintenance.dart';
+import 'package:try_project/classes/User.dart';
 import 'package:try_project/classes/Vehicle.dart';
-import 'package:try_project/classes/test.dart';
 import 'package:try_project/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'classes/test.dart';
+import 'classes/runIt.dart';
 
 // void main() => runApp(const MyApp());
 
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Test t = Test();
+    User u = runIt().user;
 
     return MaterialApp(
       title: 'NavigationDrawer Demo',
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         colorSchemeSeed: const Color(0xff6750a4),
       ),
-      home: HomePage(veh: t.v),
+      home: HomePage(veh: t.v, user: u),
     );
   }
 }
