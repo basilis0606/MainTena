@@ -1,6 +1,6 @@
 import 'dart:core';
 
-import 'package:try_project/classes/Post.dart';
+import 'Post.dart';
 
 class News extends Post {
   News(String title, String text) : super(title, text);

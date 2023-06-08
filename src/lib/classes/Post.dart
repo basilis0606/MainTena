@@ -1,4 +1,4 @@
-import 'package:try_project/classes/Comment.dart';
+import 'Comment.dart';
 import 'dart:core';
 
 class Post {

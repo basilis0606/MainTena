@@ -1,8 +1,5 @@
-import 'package:try_project/classes/Fuel.dart';
-import 'package:try_project/classes/Maintenance.dart';
-import 'package:try_project/classes/User.dart';
-import 'package:try_project/classes/Vehicle.dart';
-import 'package:try_project/pages/home_page.dart';
+import 'classes/User.dart';
+import 'pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'classes/test.dart';
 import 'classes/runIt.dart';
