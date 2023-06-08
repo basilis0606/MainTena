@@ -11,13 +11,9 @@
 \usepackage{textcomp}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
+\usepackage{graphicx}
 
 \usetikzlibrary{positioning}
-
-\usepackage{titling}
-
-\setcounter{footnote}{0}
-\renewcommand{\thefootnote}{\arabic{footnote}}
 
 % Define a macro to create a table with fixed column widths
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
@@ -83,7 +79,7 @@
 	\vspace{25pt} % Whitespace
 	\rule{\linewidth}{0.5pt}\\ % Thin top horizontal rule
 	\vspace{20pt} % Whitespace
-    {\Large Project Description v0.1}\\ % The assignment title
+    {\Large Team Plan v0.1}\\ % The assignment title
 	\vspace{12pt} % Whitespace
 	\rule{\linewidth}{0.5pt}\\ % Thick bottom horizontal rule
 	\vspace{12pt} % Whitespace
@@ -91,7 +87,8 @@
         \rule{\linewidth}{2pt}
 }
 \author{
-Ιωάννης Παναρίτης \thanks{Editor} \\UP1072632 \and Βασίλειος Τσούλος \thanks{Peer Review} \\UP1072605 \and Κωνσταντίνος Γιακαλλής \\UP1072533 \and \hspace{-0.9cm} Νικόλαος Χαλκιόπουλος \\ \hspace{-0.9cm}UP1072572
+Βασίλειος Τσούλος \thanks{Editor} \\UP1072605 \and Κωνσταντίνος Γιακαλλής \thanks{Co-editor} \\UP1072533
+\and \hspace{-1ex} Ιωάννης Παναρίτης \\ \hspace{-1ex} UP1072632  \and Νικόλαος Χαλκιόπουλος \\UP1072572
 }
 
 
@@ -110,77 +107,127 @@
 
 \maketitle
 \pagebreak
-\Large
 
 \tableofcontents
+\Large
 
-\section{Project Description}
-
-\subsection{Περιγραφή}
-
-Το \src{Maintena} είναι μια φιλική προς το χρήστη εφαρμογή που στοχεύει να διευκολύνει τη συντήρηση του οχήματος για τους οδηγούς. Κάθε όχημα έχει ένα εγχειρίδιο σέρβις από τον κατασκευαστή του που αναφέρει ποιο, πόσο συχνά και πώς πρέπει να συντηρείται το όχημα. Το \src{Maintena} παρέχει μια εύχρηστη λύση που βοηθά τους οδηγούς να διατηρήσουν τη μακροζωία του οχήματός τους και την ομαλή λειτουργία του.
-
-\subsection{Χαρακτηριστικά}
+\section{Εργαλεία που θα χρησιμοποιήσουμε}
 \begin{itemize}
-    \item Εισαγωγή χρήστη - Η εφαρμογή επιτρέπει στον χρήστη να εισάγει το μοντέλο αυτοκινήτου του και τα τρέχοντα χιλιόμετρα για να λάβει πληροφορίες συντήρησης ειδικά για το όχημά του.
-    \item Υπενθυμίσεις συντήρησης - Η εφαρμογή θα ελέγχει συνεχώς τα χιλιόμετρα που διανύθηκαν (ή τις ώρες χρήσης για ορισμένες συσκευές) και θα παρέχει στον χρήστη τακτικές ενημερώσεις σχετικά με το πότε θα γίνει η επόμενη υπηρεσία, ποιες αλλαγές πρέπει να γίνουν, πόσο πιθανόν θα κοστίσει και πού να προμηθευτείτε ανταλλακτικά ή τη βοήθεια έμπειρου τεχνίτη.
-    \item Αναβαθμίσεις απόδοσης - Το \src{Maintena} προσφέρει προτάσεις για αναβαθμίσεις για τη βελτίωση της απόδοσης του οχήματος, όπως αλλαγές φίλτρων, χαρτογράφηση εγκεφάλου και αγωνιστικά καύσιμα. Αυτές οι προτάσεις βασίζονται στις οδηγικές συνήθειες του χρήστη και στην κατάσταση του οχήματος.
-    \item Ιστορικό προβλημάτων - Η εφαρμογή παρακολουθεί όλα τα ζητήματα που αντιμετώπισε το όχημα στο παρελθόν, συμπεριλαμβανομένης της ημερομηνίας του προβλήματος, του κόστους επισκευής και της τοποθεσίας του συνεργείου επισκευής.
-    \item Νέος πίνακας συντήρησης - Η εφαρμογή προσαρμόζει το πρόγραμμα συντήρησης στα νέα εξαρτήματα που είναι εγκατεστημένα στο όχημα. Για παράδειγμα, ένας κινητήρας που λειτουργεί με μεγαλύτερη συμπίεση από την κανονική απαιτεί συχνότερη και καλύτερη συντήρηση.
-    \item Community Discussion - \src{Maintena} παρέχει μια πλατφόρμα για τους χρήστες να συζητούν και να λύνουν σχετικές ερωτήσεις με άλλους οδηγούς και τεχνίτες.
-    \item Διάγνωση οχήματος - Η εφαρμογή προσφέρει καλύτερη επίγνωση της κατάστασης και των δυνατοτήτων του οχήματος. Παρέχει μια διαγνωστική αναφορά που εντοπίζει πιθανά προβλήματα και προτείνει λύσεις για τη διατήρηση της λειτουργίας του οχήματος με τον καλύτερο δυνατό τρόπο.
+    \item Συγγραφή Κειμένου: Overleaf
+    \item Γραφιστικά και mock ups: Gimp
+    \item Γλώσσα προγραματισμού: Python
+    \item Ide: Visual Studio Code
+    \item Δημιουργία Gantt: Teamgantt
+    \item Δημιουργία Pert: Visual paradigm
+    \item Επικοινωνία Μελών: Discord
+    \item Διαμοιρασμός και παρακολούθηση διαδικασίας ανάπτυξης: Github
 \end{itemize}
-
-\subsection{Οφέλη}
-    \begin{itemize}
-        \item Άνεση - Το \src{Maintena} παρέχει έναν βολικό τρόπο παρακολούθησης του προγράμματος συντήρησης του οχήματός σας και παρέχει προτάσεις για βελτιώσεις.
-        \item Οικονομία - Η εφαρμογή βοηθά στη διατήρηση της μακροζωίας του οχήματος, μειώνοντας την ανάγκη για δαπανηρές επισκευές και αντικαταστάσεις.
-        \item Βελτιωμένη απόδοση - Η εφαρμογή προσφέρει προτάσεις για αναβαθμίσεις που μπορούν να βελτιώσουν την απόδοση του οχήματος, κάνοντας την οδήγηση πιο απολαυστική.
-        \item Κοινότητα - Η εφαρμογή παρέχει μια πλατφόρμα στους χρήστες να συζητούν και να λύνουν σχετικές ερωτήσεις με άλλους οδηγούς και τεχνίτες.
-    \end{itemize}
-
 \pagebreak
 
-\section{Mock ups \cite{materialdesign}}
+\section{Χρονοπρογραμματισμός έργου}
+\begin{table}[ht]
+\centering
+\resizebox{\textwidth}{!}
+{
+\Large
+\begin{tabular}{|c | p{0.5\linewidth} | c | c | c | c |}
+\hline
+Τυπικό υποέργο & Περιγραφή                                                                                                         & Εξαρτήσεις & Αισιόδοξη (μέρες) & Κανονική (μέρες) & Απαισιόδοξη (μέρες) \\ \hline
+ΤΥ1            & Αρχικο brainstorming και υλοποίηση   project description                                                          & -          & 3         & 4        & 7           \\ \hline
+TΥ2            & Περαιτέρω   ανάπτυξη ιδέας και δομή έργου και υλοποίηση project plan                                              & ΤΥ1        & 2         & 3        & 4           \\ \hline
+TΥ3            & Ανάλυση ρίσκων   για την υλοποίηση του έργου, υλοποίηση risk assesment                                            & ΤΥ2        & 1         & 1        & 2           \\ \hline
+TΥ4            & Καταμερισμός εργασιών,πόρων   και mapping της εργασιας του project, team plan                                     & ΤΥ2        & 1         & 2        & 3           \\ \hline
+TΥ5            & Καταγραφή features και ανάλυση χρηστών εφαρμογής για την   κατασκευη και ανάθεση use cases                        & ΤΥ2        & 7         & 8        & 9           \\ \hline
+TΥ6            & Κατηγοριοποίηση   του έργου και εκπόνηση κλάσεων για τη δημιουργία του domain model                               & TΥ2        & 3         & 4        & 5           \\ \hline
+TΥ7            & Δημιουργία robustness diagrams των use cases για περεταιρω   αναλυση τους                                         & TΥ5        & 10        & 15       & 20          \\ \hline
+TΥ8            & Αναθεωρηση use   cases με βάση τα robustness diagrams                                                             & TΥ3, TY6   & 6         & 7        & 8           \\ \hline
+TΥ9            & Αναθεώρηση domain model με βάση τα   robustness diagrams                                                          & ΤΥ4, TY6   & 6         & 7        & 8           \\ \hline
+TΥ10           & Αρχή συγγραφής κώδικα έργουmilestone-done with implemetation and starting alpha                                   & ΤΥ9, TY10  & 10        & 20       & 25          \\ \hline
+TΥ11           & Βασιζόμενοι στα use cases και   robustness diagrams υλοποιούμε τα sequence diagrams                               & ΤΥ10       & 10        & 15       & 20          \\ \hline
+TΥ12           & Αναθεώρηση domain models και πιθανώς   use cases με βαση sequence diagrams                                        & ΤΥ11       & 6         & 7        & 8           \\ \hline
+TY13           & Βασισμένοι στο domain model και τον κώδικά μας αναπτύσσουμε το class diagram                                      & TY10       & 10        & 15       & 20          \\ \hline
+TY14           & Δοκιμάζουμε και   τελειοποιούμε μια alpha version του κωδικά μας για υποβολή                                      & TY10,TY12  & 15        & 20       & 25          \\ \hline
+TY15           & Αναθεώρηση και   βελτίωση όλων των εργαλείων και μοντέλων για την ανάπτυξη του έργου, παράδοση   τελικών αναφορών & TY13, TY14 & 25        & 30       & 35          \\ \hline
+TY16           & Τελειοποίηση   της εφαρμογής και παρουσίαση της alpha version                                                     & TY13, TY14 & 25        & 30       & 35          \\ \hline       
+\end{tabular}}
+\end{table}
+\pagebreak
 
-\begin{figure}[!htb]
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.6\linewidth]{assets/timeline_mock_up.jpg}
-  \caption{Timeline}
-  \label{fig:sfig1}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.6\linewidth]{assets/analytics_mock_up.png}
-  \caption{Analytics}
-  \label{fig:sfig2}
-\end{subfigure}
-\label{fig:fig}
-\par\bigskip % force a bit of vertical whitespace
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.6\linewidth]{assets/forum_mock_up.jpg}
-  \caption{Forum}
-  \label{fig:sfig3}
-\end{subfigure}
-\label{fig:fig}
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.6\linewidth]{assets/profile_mock_up.jpg}
-  \caption{Profile}
-  \label{fig:sfig4}
-\end{subfigure}
-\label{fig:fig}
+\section{Gantt Chart}
+
+Παρακάτω παρατίθεται ο χρονοπρογραμματισμός του έργου. Ως έναρξη του project έχει οριστεί η 1η Μαρτίου και ως λήξη η 6η Ιούλη.\\
+% \vspace{1cm}
+\begin{figure}[ht]
+    \hspace{-3.3cm}
+    \includegraphics[trim = 0cm 12cm 0cm 2cm, clip]{docs/Team-plan/assets/GanttForProject.pdf}
+    \caption{Gantt chart}
 \end{figure}
 
-\section{Tools Used}
+Ως τυπικά υποέργα (tasks), είχαμε τα Τεχνικά Κείμενα που έπρεπε να παραδοθούν σε κάθε ένα από τα παραδοτέα. Τα tasks , φαίνονται στο Gantt διάγραμμα.
+Στο τέλος κάθε παραδοτέου υπήρχε ένα Milestone. 
+
+Συγκεκριμένα :
+\begin{enumerate}
+    \item Ανάλυση Απαιτήσεων Εφαρμογής (Requirements Engineering)
+    \item Σχεδιασμός Γενικής Αρχιτεκτονικής και Λειτουργιών Συστήματος
+    \item Επέκταση Αρχιτεκτονικής και Minimum Viable Product
+    \item Testing Υλοποίησης
+    \item Τελικές αλλαγές στο σύστημα και παράδοση στον πελάτη
+\end{enumerate}
+
+\section{Pert Chart}
+
+\begin{figure}[ht]
+    \hspace{-0.5cm}
+    \includegraphics[width = 1.2\linewidth,trim = 0cm 0cm 0cm 2cm, clip]{docs/Team-plan/assets/pertForProject.pdf}
+    \caption{Pert chart}
+\end{figure}
+
+\section{Στόχοι Ομάδας}
 \begin{itemize}
-    \item Συγγραφή κειμένου: Overleaf
-    \item Δημιουργία Mock up: Gimp
+    \item Ανάπτυξη ενός εύχρηστου και αποτελεσματικού εργαλείου που θα βοηθήσει τους ιδιοκτήτες οχημάτων να διατηρούν τα οχήματά τους σε καλή κατάσταση και να μειώνουν την ανάγκη για συχνές επισκευές.
+    \item Να διασφαλιστεί ότι το εργαλείο είναι εύκολο στη χρήση και μπορεί να χρησιμοποιηθεί από οποιονδήποτε, ανεξάρτητα από το επίπεδο τεχνικών γνώσεων τους.
+    \item Να διενεργηθούν εκτενή τεστ και να διασφαλιστεί ότι το εργαλείο είναι αξιόπιστο και ακριβές.
 \end{itemize}
 
-\bibliography{bibliography}
-% \cite{materialdesign}
+\section{Μέθοδος Εργασίας}
+Στην πρώτη μας συνάντηση ορίστηκε η μέθοδος εργασίας μας, καθώς και ο αριθμός των εβδομαδιαίων συναντήσεων που θα θέλαμε να τηρηθούν καθόλη την διάρκεια του ΄Εργου.\\
+Ομόφωνα αποφασίστηκε οτι σε κάθε συνάντηση θα αφιερώνουμε 10 λεπτά να επανεξετάζουμε τι έχει γίνει το διάστημα που πέρασε από την προηγούμενη συνάντηση, στην συνέχεια θα δίνουμε feedback σε ότι έχει ήδη προετοιμαστεί, ώστε να προχωρήσουμε σε οριστικοποίηση ή διόρθωση και τέλος θα θέτουμε τους στόχους μας για την επόμενη φορά χωρίζοντας τον φόρτο εργασίας ανάμεσα στα μέλη της ομάδας. \\
+Ο αριθμός των σταθερών εβδομαδιαίων συναντήσεων ορίστηκε για 2, με φυσικά οποιαδήποτε έξτρα προσθήκη κριθεί απαραίητη κατά την διάρκεια ώστε να μείνουμε εντός χρονοδιαγράμματος. \\
+Ως μέσο επικοινωνίας και planning ορίστηκε η πλατφόρμα Discord .Παράλληλα τα αρχεία κώδικα που θα επεξεργαζόμαστε καθόλη την διάρκεια του ΄Εργου θα βρίσκονται στο GitHub της ομάδας μας (https://github.com/basilis0606/MainTena)
+
+\section{Ολοκλήρωση του PROJECT και τελικές αλλαγές}
+Η αρχική μας ιδέα για μια απλή εφαρμογή συντήρησης οχήματος έχει μετατραπεί σε έναν ολόκληρο οικοσύστημα και μια κοινότητα ανθρώπων που μοιράζονται το ίδιο πάθος για τον κόσμο της αυτοκινητοβιομηχανίας. Το αποτέλεσμα είναι ένα ψηφιακό εργαλείο που λειτουργεί ως σύντροφος και γιατρός οχημάτων, παρέχοντας ένα πλήθος χρήσιμων λειτουργιών για κάθε ιδιοκτήτη.
+
+Αυτή η πλατφόρμα όχι μόνο καταγράφει τη συντήρηση και τα λειτουργικά στοιχεία του οχήματος, αλλά επίσης παρέχει μια κοινότητα όμοιων ανθρώπων που μπορούν να μοιραστούν γνώσεις, εμπειρίες και συμβουλές. Οι χρήστες μπορούν να συνδεθούν με άλλους ενδιαφερόμενους, να συζητήσουν για τις τελευταίες τάσεις στην αυτοκινητοβιομηχανία, να ανταλλάξουν προτάσεις για τη βελτίωση της απόδοσης των οχημάτων τους και να δημιουργήσουν νέες συνεργασίες.
+
+Το εργαλείο αυτό δίνει στους ιδιοκτήτες οχημάτων τη δυνατότητα να είναι ενημερωμένοι και εξοπλισμένοι με τις καλύτερες πρακτικές για τη φροντίδα των αυτοκινήτων τους. Επιπλέον, μέσω της πλατφόρμας, μπορούν να λάβουν εξατομικευμένες συμβουλές και προτάσεις για τη βελτίωση της απόδοσης των οχημάτων τους από ειδικούς του χώρου.
+
+Συνολικά, η ιδέα μας έχει εξελιχθεί από μια απλή εφαρμογή συντήρησης οχήματος σε ένα ολοκληρωμένο ψηφιακό εργαλείο και κοινότητα που συνδέει ανθρώπους με κοινά ενδιαφέροντα στον χώρο της αυτοκινητοβιομηχανίας. Αποτελεί ένα χρήσιμο εργαλείο για κάθε ιδιοκτήτη οχήματος, παρέχοντας υποστήριξη, κοινότητα και πληροφορίες για τη βελτίωση της εμπειρίας τους με τα αυτοκίνητα τους.
+
+\section{Screenshots}
+\centering
+\includegraphics[width=0.5\textwidth]{docs/Project-description/Screenshots/IMG_20230608_191731.jpg}
+\\
+\centering
+\includegraphics[width=0.5\textwidth]{docs/Project-description/Screenshots/IMG_20230608_191908.jpg}
+\\
+\centering
+\includegraphics[width=0.5\textwidth]{docs/Project-description/Screenshots/IMG_20230608_191859.jpg}
+\\
+\centering
+\includegraphics[width=0.5\textwidth]{docs/Project-description/Screenshots/IMG_20230608_191847.jpg}
+\\
+\centering
+\includegraphics[width=0.5\textwidth]{docs/Project-description/Screenshots/IMG_20230608_191831.jpg}
+\\
+\centering
+\includegraphics[width=0.5\textwidth]{docs/Project-description/Screenshots/IMG_20230608_191815.jpg}
+\\
+\centering
+\includegraphics[width=0.5\textwidth]{docs/Project-description/Screenshots/IMG_20230608_191758.jpg}
+
+% \bibliography{bibliography}
 
 \end{document}
+
