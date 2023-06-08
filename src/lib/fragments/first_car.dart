@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:try_project/classes/Vehicle.dart';
 import 'package:try_project/fragments/garage/expenses.dart';
 import 'garage/garage_maintenance.dart';
+import 'garage/garage_upgrades.dart';
+import 'garage/garage_damage.dart';
 
 class FirstCar extends StatelessWidget {
   final Vehicle veh;
@@ -21,7 +23,7 @@ class FirstCar extends StatelessWidget {
                   Tab(text: "Expenses"),
                   Tab(text: "Maintenance"),
                   Tab(text: "Upgrades"),
-                  Tab(text: "Problem history"),
+                  Tab(text: "Damage history"),
                 ],
                 labelColor: Colors.black,
                 unselectedLabelColor: Colors.grey,
@@ -34,8 +36,8 @@ class FirstCar extends StatelessWidget {
             children: [
               Expenses(my_veh: this.veh), // Pass the named parameter correctly
               MaintenanceFragment(vehicle: this.veh),
-              Icon(Icons.directions_transit),
-              Text("Error"),
+              UpgradesFragment(vehicle: this.veh),
+              DamagesFragment(vehicle: this.veh),
             ],
           ),
         ),

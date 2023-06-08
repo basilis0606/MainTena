@@ -154,6 +154,23 @@ class runIt {
         date: DateTime.now(),
         estimatedCost: 150.0,
         description: "battery replacement");
+    Maintenance m11 = Maintenance(
+      type: "brake pad replacement",
+      serviceTaskId: 22,
+      mileage: 50000.0,
+      date: DateTime.now(),
+      estimatedCost: 200.0,
+      description: "replace brake pads",
+    );
+
+    Maintenance m12 = Maintenance(
+      type: "tire rotation",
+      serviceTaskId: 23,
+      mileage: 10000.0,
+      date: DateTime.now(),
+      estimatedCost: 50.0,
+      description: "rotate tires",
+    );
 
     Upgrade up1 = Upgrade(
         type: "Nitro",
@@ -215,7 +232,7 @@ class runIt {
     Insurance i2 = Insurance(
         completion: DateTime(2026, 6, 15, 10, 30, 0),
         type: "mera",
-        mileage: 123412.0,
+        mileage: 123.0,
         date: DateTime.now(),
         estimatedCost: 10.0,
         description: "mera");
@@ -246,6 +263,8 @@ class runIt {
     u.garage.vehicles[1].manual.createNotification(m4);
     u.garage.vehicles[1].manual.createNotification(m5);
     u.garage.vehicles[1].manual.createNotification(m6);
+    u.garage.vehicles[1].manual.createNotification(m11);
+    u.garage.vehicles[1].manual.createNotification(m12);
 
     u.garage.vehicles[1].manual.createNotification(up3);
     u.garage.vehicles[1].manual.createNotification(up4);
@@ -268,15 +287,15 @@ class runIt {
     u.garage.vehicles[0].createExpense(70.0, DateTime.now(), "\$", up1);
     u.garage.vehicles[0].createExpense(100.0, DateTime.now(), "\$", i1);
 
-    u.garage.vehicles[1].createExpense(10.0, DateTime.now(), "\$", f4);
     u.garage.vehicles[1].createExpense(20.0, DateTime.now(), "\$", f5);
+    u.garage.vehicles[1].createExpense(50.0, DateTime.now(), "\$", m5);
+    u.garage.vehicles[1].createExpense(1000.0, DateTime.now(), "\$", i2);
+    u.garage.vehicles[1].createExpense(10.0, DateTime.now(), "\$", f4);
     u.garage.vehicles[1].createExpense(30.0, DateTime.now(), "\$", f6);
     u.garage.vehicles[1].createExpense(40.0, DateTime.now(), "\$", m4);
-    u.garage.vehicles[1].createExpense(50.0, DateTime.now(), "\$", m5);
     u.garage.vehicles[1].createExpense(60.0, DateTime.now(), "\$", m6);
-    u.garage.vehicles[1].createExpense(70.0, DateTime.now(), "\$", up3);
     u.garage.vehicles[1].createExpense(80.0, DateTime.now(), "\$", up4);
     u.garage.vehicles[1].createExpense(90.0, DateTime.now(), "\$", d2);
-    u.garage.vehicles[1].createExpense(1000.0, DateTime.now(), "\$", i2);
+    u.garage.vehicles[1].createExpense(70.0, DateTime.now(), "\$", up3);
   }
 }
