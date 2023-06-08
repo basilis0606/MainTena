@@ -18,45 +18,54 @@ class _ExpensesState extends State<Expenses> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Align(
-          alignment: Alignment.topRight,
-          child: Padding(
-            padding: const EdgeInsets.only(right: 45, top: 16, bottom: 8),
-            child: PopupMenuExample(
-              onItemSelected: (SampleItem item) {
-                setState(() {
-                  selectedMenu = item;
-                });
-              },
-            ),
-          ),
-        ),
-        const Align(
-          alignment: Alignment.centerLeft,
-          child: Padding(
-            padding: EdgeInsets.only(left: 40, bottom: 10),
-            child: Text(
-              "Recent Expenses",
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
+    return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Add your desired functionality here
+        },
+        child: const Icon(Icons.edit),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+      body: Column(
+        children: [
+          Align(
+            alignment: Alignment.topRight,
+            child: Padding(
+              padding: const EdgeInsets.only(right: 45, top: 16, bottom: 8),
+              child: PopupMenuExample(
+                onItemSelected: (SampleItem item) {
+                  setState(() {
+                    selectedMenu = item;
+                  });
+                },
               ),
             ),
           ),
-        ),
-        Expanded(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 40,
-              vertical: 8,
+          const Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: EdgeInsets.only(left: 40, bottom: 10),
+              child: Text(
+                "Recent Expenses",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
-            child:
-                SquareList(my_veh: widget.my_veh, filter: getFilterCondition()),
           ),
-        ),
-      ],
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 40,
+                vertical: 8,
+              ),
+              child: SquareList(
+                  my_veh: widget.my_veh, filter: getFilterCondition()),
+            ),
+          ),
+        ],
+      ),
     );
   }
 
