@@ -50,7 +50,7 @@ class HomePageState extends State<HomePage> {
 
   _getDrawerItemWidget(int pos) {
     if (pos < widget.cars.length) {
-      return FirstCar(veh: widget.user.garage.vehicles[0]);
+      return FirstCar(veh: widget.user.garage.vehicles[pos]);
     } else if (pos == widget.cars.length ||
         pos == widget.cars.length + 1 ||
         pos == widget.cars.length + 2) {

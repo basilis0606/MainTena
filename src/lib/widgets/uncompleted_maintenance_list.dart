@@ -13,7 +13,7 @@ class uncompletedMaintenanceList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
+    return ListView.separated(
       shrinkWrap: true,
       itemCount: my_veh.manual.notifications.length,
       itemBuilder: (context, index) {
@@ -29,6 +29,14 @@ class uncompletedMaintenanceList extends StatelessWidget {
             mileage: my_veh.manual.mileage,
             date: my_veh.manual.notifications[index].date,
             type: (my_veh.manual.notifications[index] as Maintenance).type);
+      },
+      separatorBuilder: (BuildContext context, int index) {
+        index = my_veh.manual.notifications.length - index - 1;
+        if (my_veh.manual.notifications[index].isDone ||
+            my_veh.manual.notifications[index] is! Maintenance) {
+          return SizedBox.shrink();
+        }
+        return Divider();
       },
     );
   }

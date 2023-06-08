@@ -19,7 +19,7 @@ class ProgressWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double progress = notifMileage / mileage;
+    double progress = mileage / notifMileage;
     Color progressBarColor = Colors.blue;
     final notificationDate = date;
     final formattedDate = DateFormat('MMMM d, yyyy').format(notificationDate);
