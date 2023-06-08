@@ -135,21 +135,15 @@ class HomePageState extends State<HomePage> {
         padding: EdgeInsets.zero,
         children: <Widget>[
           const UserAccountsDrawerHeader(
-              accountName: Text("John Doe"), accountEmail: null),
+            accountName: Text("John Doe"),
+            accountEmail: null,
+            currentAccountPicture: CircleAvatar(
+              foregroundImage: AssetImage("assets/profile.png"),
+            ),
+          ),
           Column(children: drawerOptions)
         ],
-      )
-
-          // child: Column(
-          //   children:
-          //     <Widget>[
-          //       const UserAccountsDrawerHeader(
-          //           accountName: Text("John Doe"), accountEmail: null),
-          //       Column(children: drawerOptions)
-          //     ],
-
-          // ),
-          ),
+      )),
       body: _getDrawerItemWidget(_selectedDrawerIndex),
     );
   }

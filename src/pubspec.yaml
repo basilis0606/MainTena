@@ -74,6 +74,7 @@ flutter:
     - assets/icons/upgrade.svg
     - assets/icons/damage.svg
     - assets/logo.png
+    - assets/profile.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
