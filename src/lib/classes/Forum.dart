@@ -1,5 +1,5 @@
 import 'dart:core';
-import 'package:try_project/classes/ForumPost.dart';
+import 'ForumPost.dart';
 
 class Forum {
   List<ForumPost> posts = [];

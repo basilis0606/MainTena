@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:try_project/classes/Notification.dart' as notif;
+import 'Notification.dart' as notif;
 
 class Expense {
   double amount;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:try_project/classes/Vehicle.dart';
-import 'package:try_project/fragments/garage/expenses.dart';
+import '../classes/Vehicle.dart';
+import 'garage/expenses.dart';
 import 'garage/garage_maintenance.dart';
 import 'garage/garage_upgrades.dart';
 import 'garage/garage_damage.dart';

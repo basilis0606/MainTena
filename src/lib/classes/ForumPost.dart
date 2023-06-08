@@ -1,4 +1,4 @@
-import 'package:try_project/classes/Post.dart';
+import 'Post.dart';
 
 class ForumPost extends Post {
   int likes = 0;

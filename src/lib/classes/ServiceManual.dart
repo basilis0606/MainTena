@@ -1,4 +1,4 @@
-import 'package:try_project/classes/Notification.dart' as notif;
+import 'Notification.dart' as notif;
 
 class ServiceManual {
   double mileage;

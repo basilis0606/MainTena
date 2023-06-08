@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:try_project/classes/Vehicle.dart';
-import 'package:try_project/fragments/first_car.dart';
-import 'package:try_project/fragments/first_fragment.dart';
-import 'package:try_project/fragments/second_fragment.dart';
-import 'package:try_project/fragments/third_fragment.dart';
+import '../classes/Vehicle.dart';
+import '../fragments/first_car.dart';
+import '../fragments/first_fragment.dart';
+import '../fragments/second_fragment.dart';
+import '../fragments/third_fragment.dart';
 import 'package:flutter/material.dart';
 import '../classes/User.dart';
 
