@@ -76,6 +76,12 @@ class runIt {
         date: DateTime.now(),
         estimatedCost: 10.0,
         description: "fasi");
+    Fuel f7 = Fuel(
+        liters: 10.0,
+        mileage: 15.0,
+        date: DateTime.now(),
+        estimatedCost: 10.0,
+        description: "shell");
     Maintenance m1 = Maintenance(
         type: "oil change",
         serviceTaskId: 11,
@@ -118,6 +124,21 @@ class runIt {
         date: DateTime.now(),
         estimatedCost: 50.0,
         description: "tire replacement");
+    Maintenance m7 = Maintenance(
+        type: "brake pad replacement",
+        serviceTaskId: 17,
+        mileage: 500.0,
+        date: DateTime.now(),
+        estimatedCost: 100.0,
+        description: "brake pad replacement");
+
+    Maintenance m8 = Maintenance(
+        type: "air filter replacement",
+        serviceTaskId: 18,
+        mileage: 1000.0,
+        date: DateTime.now(),
+        estimatedCost: 20.0,
+        description: "air filter replacement");
 
     Upgrade up1 = Upgrade(
         type: "Nitro",
@@ -191,6 +212,8 @@ class runIt {
     u.garage.vehicles[0].manual.createNotification(m1);
     u.garage.vehicles[0].manual.createNotification(m2);
     u.garage.vehicles[0].manual.createNotification(m3);
+    u.garage.vehicles[0].manual.createNotification(m7);
+    u.garage.vehicles[0].manual.createNotification(m8);
 
     u.garage.vehicles[0].manual.createNotification(up1);
     u.garage.vehicles[0].manual.createNotification(up2);

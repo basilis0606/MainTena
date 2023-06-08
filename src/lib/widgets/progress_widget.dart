@@ -37,7 +37,7 @@ class ProgressWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              "$mileage km",
+              "$notifMileage km",
               style: const TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
