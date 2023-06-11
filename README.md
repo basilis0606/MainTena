@@ -26,27 +26,36 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<a href="https://example.com">
-  <img src="docs/Project-description/assets/Screenshots\IMG_20230608_191847.jpg" alt="Product Name Screen Shot" style="max-width:300px;">
-</a>
+<p align="center">
+    <a href="https://example.com"><img src="docs/Project-description/assets/Screenshots/IMG_20230608_191731.jpg" alt="Product 1" style="width: 200px;"></a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://example.com"><img src="docs/Project-description/assets/Screenshots/IMG_20230608_191847.jpg" alt="Product 2" style="width: 200px;"></a>
+</p>
 
+Maintena is a user-friendly application that aims to make vehicle maintenance easier for drivers. </br>
+Each vehicle has a service manual from the manufacturer
+which states which, how often and how the vehicle should be serviced.
+vehicle. </br>
+Maintena provides an easy-to-use solution that helps drivers to
+and maintain the longevity of their vehicle and the
+smooth operation.</br>
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Features:
+* Maintenance reminders
+* Expenses tracking
+* Performance upgrades
+* Damage history
+* Community Discussion
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 ### Built With
 
 * [![Dart][Dart-ico]][Dart-url]
 * [![Flutter][Flutter-ico]][Flutter-url]
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+Just download the app from the [releases](https://github.com/basilis0606/MainTena/releases)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
