@@ -27,9 +27,9 @@
 ## About The Project
 
 <p align="center">
-    <a href="https://example.com"><img src="docs/Project-description/assets/Screenshots/IMG_20230608_191731.jpg" alt="Product 1" style="width: 200px;"></a>
+    <img src="docs/Project-description/assets/Screenshots/IMG_20230608_191731.jpg" alt="Product 1" style="width: 200px;">
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="https://example.com"><img src="docs/Project-description/assets/Screenshots/IMG_20230608_191847.jpg" alt="Product 2" style="width: 200px;"></a>
+    <img src="docs/Project-description/assets/Screenshots/IMG_20230608_191847.jpg" alt="Product 2" style="width: 200px;">
 </p>
 
 Maintena is a user-friendly application that aims to make vehicle maintenance easier for drivers. </br>
