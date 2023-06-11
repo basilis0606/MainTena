@@ -15,7 +15,7 @@
 <!--     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br /> -->
     <br />
-    <a href="https://github.com/basilis0606/MainTena/">View Demo</a>
+    <a href="https://github.com/basilis0606/MainTena/releases">View Demo</a>
     ·
     <a href="https://github.com/basilis0606/MainTena//issues">Report Bug</a>
     ·
