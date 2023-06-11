@@ -10,7 +10,7 @@
   <h3 align="center">Maintena</h3>
 
   <p align="center">
-    An awesome car maintenance app that does not make cofee!
+    An awesome car maintenance app that does not make coffee!
     <br />
 <!--     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br /> -->
