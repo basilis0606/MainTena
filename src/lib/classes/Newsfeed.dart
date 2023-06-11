@@ -51,24 +51,3 @@ class Newsfeed {
     news.addAll(allNews.take(quantity));
   }
 }
-
-// void main() {
-//   News news1 = News("Breaking News 1", "Breaking news content 1");
-//   News news2 = News("Breaking News 2", "Breaking news content 2");
-
-//   List<News> newsList = [news1, news2];
-
-//   Newsletter newsletter = Newsletter(newsList);
-
-//   Newsfeed myNewsfeed = Newsfeed();
-//   myNewsfeed.addNewsletter(newsletter);
-
-//   // Perform filtering
-//   myNewsfeed.filter();
-
-//   // Find specific news articles
-//   myNewsfeed.findNews();
-
-//   // Remove a newsletter
-//   myNewsfeed.removeNewsletter(0);
-// }

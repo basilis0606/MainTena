@@ -36,27 +36,3 @@ class Forum {
     posts.add(newPost);
   }
 }
-
-/*void main() {
- Creating a forum object
-  Forum myForum = Forum();
-
-  // Creating some posts
-  myForum.newPost("fasdf","arxi");
-  myForum.newPost("fasssd","telos");
-  
-
-  // Displaying all posts
-  for (var post in myForum.posts) {
-    myForum.read(post);
-  }
-
-  // Filtering posts
-  String searchString = // get user input for search string
-  List<ForumPost> filteredPosts = myForum.filter(fasdf);
-
-  // Displaying filtered posts
-  print("Filtered Posts:");
-  for (var post in filteredPosts) {
-    myForum.read(post);*/
- //}

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import '../classes/Vehicle.dart';
 import '../classes/Maintenance.dart';
 import 'progress_widget.dart';
-import 'package:intl/intl.dart';
 
 class uncompletedMaintenanceList extends StatelessWidget {
   final Vehicle my_veh;

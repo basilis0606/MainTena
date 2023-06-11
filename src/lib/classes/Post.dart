@@ -1,5 +1,4 @@
 import 'Comment.dart';
-import 'dart:core';
 
 class Post {
   String title;
@@ -23,5 +22,3 @@ class Post {
     text = newText;
   }
 }
-
-void main() {}

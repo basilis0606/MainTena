@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'Notification.dart' as notif;
 
 class Expense {

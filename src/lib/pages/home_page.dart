@@ -1,10 +1,6 @@
 import 'dart:async';
 
-import '../classes/Vehicle.dart';
 import '../fragments/first_car.dart';
-import '../fragments/first_fragment.dart';
-import '../fragments/second_fragment.dart';
-import '../fragments/third_fragment.dart';
 import 'package:flutter/material.dart';
 import '../classes/User.dart';
 
@@ -15,7 +11,6 @@ class DrawerItem {
 }
 
 class HomePage extends StatefulWidget {
-  final Vehicle veh;
   final User user;
 
   final drawerItems = [
@@ -29,7 +24,7 @@ class HomePage extends StatefulWidget {
     DrawerItem("Car 2", Icons.car_repair)
   ];
 
-  HomePage({Key? key, required this.veh, required this.user}) : super(key: key);
+  HomePage({Key? key, required this.user}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
