@@ -27,7 +27,7 @@
 ## About The Project
 
 <a href="https://example.com">
-  <img src="docs/Project-description/assets/Screenshots\IMG_20230608_191847.jpg" alt="Product Name Screen Shot" style="max-width:400px;">
+  <img src="docs/Project-description/assets/Screenshots\IMG_20230608_191847.jpg" alt="Product Name Screen Shot" style="max-width:300px;">
 </a>
 
 
